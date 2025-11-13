@@ -1,0 +1,257 @@
+.header {
+  background-color: $blue;
+}
+
+.header .header__container {
+  padding-top: 19px;
+  padding-bottom: 13px;
+  position: relative;
+  display: grid;
+  align-items: center;
+  gap: 8px;
+
+  @media (max-width: $mobile-width-only) {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "burger logo"
+      "burger phone";
+    gap: 16px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-rows: minmax(38px, 1fr) auto;
+    grid-template-areas:
+      "burger logo phone"
+      "nav    nav  nav";
+    padding-top: 25px;
+    padding-bottom: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+.header__nav-list {
+  @include reset;
+
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    gap: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 31px;
+    flex-direction: row;
+  }
+}
+
+.header__nav-link,
+.header__phone-link {
+  color: $white;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.header__phone-link {
+  letter-spacing: normal;
+  font-weight: 600;
+  display: block;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 3px;
+  }
+}
+
+.header__nav-link {
+  @media (min-width: $desktop-width) {
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+}
+
+.header__button {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  background: none;
+  cursor: pointer;
+  display: none;
+
+  @media (max-width: $tablet-width-only) {
+    display: block;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    grid-area: burger;
+    align-self: start;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    grid-area: burger;
+  }
+
+  &::before,
+  &::after {
+    @include pseudo;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease;
+  }
+
+  &::before {
+    background-image: url("../../img/sprite/burger-icon.svg");
+    opacity: 1;
+  }
+
+  &::after {
+    background-image: url("../../img/sprite/cross-icon.svg");
+    opacity: 0;
+    top: 40%;
+  }
+}
+
+.header__button--active {
+  &::before {
+    opacity: 0;
+  }
+
+  &::after {
+    opacity: 1;
+  }
+}
+
+.header__logo {
+  max-width: 100%;
+  overflow: hidden;
+
+  @media (max-width: $mobile-width-only) {
+    grid-area: logo;
+    justify-self: end;
+    align-self: end;
+    margin-top: -4px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    grid-area: logo;
+    justify-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 205px;
+  }
+}
+
+.header__logo-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-self: center;
+  }
+}
+
+.header__phone {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: $mobile-width-only) {
+    grid-area: phone;
+    justify-self: end;
+    align-self: start;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    grid-area: phone;
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-self: end;
+    min-width: 157px;
+  }
+}
+
+.header__nav {
+  max-width: 100%;
+  overflow: hidden;
+
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $blue;
+    padding: 12px 15px 46px;
+    z-index: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 45px 42px 0;
+    grid-area: nav;
+    width: 100%;
+    background-color: $blue;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 35px 45px;
+    justify-self: center;
+    display: block;
+  }
+}
+
+.header__nav--closed {
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.header__nav--opened {
+  @media (max-width: $tablet-width-only) {
+    display: block;
+  }
+}

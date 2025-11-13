@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifetour</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifetour</title>
+  <link rel="preload" href="fonts/Montserrat-Light.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" type="font/woff2" as="font">
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
-    <div data-test="training">training</div>
-    <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+<body class="page-body">
+  <header class="header" data-test="header">
+    <div class="header__container container">
+      <button class="header__button button" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-image" src="img/logo-icon.svg" width="142" height="42" alt="Логотип компании">
+      </a>
+      <nav class="header__nav header__nav--closed">
+        <ul class="header__nav-list">
+          <li>
+            <a class="header__nav-link" href="#tours">Туры</a>
+          </li>
+          <li>
+            <a class="header__nav-link" href="#study">Обучение</a>
+          </li>
+          <li>
+            <a class="header__nav-link" href="#about">О нас</a>
+          </li>
+          <li>
+            <a class="header__nav-link" href="#feedback">Отзывы</a>
+          </li>
+          <li>
+            <a class="header__nav-link" href="#photos">Фотографии</a>
+          </li>
+          <li>
+            <a class="header__nav-link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__phone">
+        <a class="header__phone-link" href="tel:88000000000">8 800 000-00-00</a>
+      </div>
+    </div>
+  </header>
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>
