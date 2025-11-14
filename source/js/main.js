@@ -1,7 +1,5 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
 import { initMobileMenu } from './header/menu.js';
+import { initHeroSlider } from './hero/hero-slider.js';
 
 initMobileMenu();
+initHeroSlider();
