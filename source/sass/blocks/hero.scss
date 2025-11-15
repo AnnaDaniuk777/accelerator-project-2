@@ -1,3 +1,8 @@
 .hero .hero__container {
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+    height: auto;
+  }
 }

@@ -20,6 +20,7 @@
 
 .slider__content {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -27,6 +28,13 @@
   z-index: 2;
   height: 100%;
   text-align: center;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding-left: 120px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .slider__content-wrapper {
@@ -37,6 +45,17 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 35px;
+    padding-top: 137px;
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 200px;
+    padding-left: 0;
+    padding-right: 420px;
+    max-width: max-content;
+    align-self: flex-start;
   }
 }
 
@@ -65,10 +84,17 @@
   color: $white;
   font-size: 15px;
   line-height: 20px;
+  padding: 0 6px;
 
   @media (min-width: $tablet-width) {
     font-size: 17px;
     line-height: 24px;
+    padding: 0 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-right: 428px;
   }
 }
 
@@ -85,26 +111,52 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
 
-.slider__button:hover {
-  background-color: darken($blue, 10%);
+  @media (min-width: $desktop-width) {
+    align-self: flex-start;
+    margin-bottom: 134px;
+  }
 }
 
 .slider__details {
   display: none;
-  margin-top: 20px;
 
   @media (min-width: $desktop-width) {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-self: flex-start;
   }
 }
 
 .slider__text {
   color: $white;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 13px 19px 12px 39px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+
+  &::after {
+    @include pseudo;
+
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-color: transparent;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+  }
+
+  &--duration::after {
+    background-image: url("../../img/sprite/moon-icon.svg");
+  }
+
+  &--difficulty::after {
+    background-image: url("../../img/sprite/level-icon.svg");
+  }
 }
 
 .slider__image {
@@ -126,6 +178,13 @@
   justify-content: center;
   gap: 20px;
   z-index: 10;
+
+  @media (min-width: $desktop-width) {
+    width: max-content;
+    bottom: 92px;
+    right: 120px;
+    left: unset;
+  }
 }
 
 .slider__pagination-bullet {
@@ -137,8 +196,39 @@
   cursor: pointer;
   transition: all 0.3s ease;
 
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+
   &--active {
     background-color: $white;
     border: 1px solid $white;
+  }
+}
+
+.slider__cards {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    width: 442px;
+    height: 365px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 197px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 410px;
+    height: 459px;
+    right: 120px;
+    bottom: unset;
+    left: unset;
+    top: 52%;
+    transform: translateY(-50%);
   }
 }

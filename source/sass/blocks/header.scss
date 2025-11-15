@@ -136,6 +136,7 @@
 
   &::before {
     background-image: url("../../img/sprite/burger-icon.svg");
+    // background-image: url("/__spritemap#sprite-burger-icon");
     opacity: 1;
   }
 
@@ -219,25 +220,25 @@
 .header__nav {
   max-width: 100%;
   overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
 
   @media (max-width: $mobile-width-only) {
-    position: absolute;
-    top: 100%;
-    left: 0;
     width: 100%;
     background-color: $blue;
     padding: 12px 15px 46px;
-    z-index: 10;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 40px 45px 42px 0;
-    grid-area: nav;
-    width: 100%;
+    padding: 40px 45px 42px;
     background-color: $blue;
+    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
+    position: static;
     padding: 35px 45px;
     justify-self: center;
     display: block;
