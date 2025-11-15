@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 
 export function initHeroSlider() {
-  const swiper = new Swiper('.slider__swiper', {
+  const initSwiper = new Swiper('.slider__swiper', {
     loop: true,
     simulateTouch: false,
     breakpoints: {
@@ -39,12 +39,12 @@ export function initHeroSlider() {
     });
   }
 
-  const bullets = document.querySelectorAll('.slider__pagination-bullet');
-  bullets.forEach((bullet, index) => {
+  const paginationBullets = document.querySelectorAll('.slider__pagination-bullet');
+  paginationBullets.forEach((bullet, index) => {
     bullet.addEventListener('click', () => {
-      swiper.slideToLoop(index);
+      initSwiper.slideToLoop(index);
     });
   });
 
-  return swiper;
+  return initSwiper;
 }

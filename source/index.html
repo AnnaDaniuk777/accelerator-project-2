@@ -19,6 +19,9 @@
     <div class="header__container container">
       <button class="header__button button" type="button">
         <span class="visually-hidden">Открыть меню</span>
+        <!-- <svg width="26" height="19" viewBox="0 0 26 19">
+          <use href="/__spritemap#sprite-burger-icon"></use>
+        </svg> -->
       </button>
       <a class="header__logo" href="index.html">
         <img class="header__logo-image" src="img/logo-icon.svg" width="142" height="42" alt="Логотип компании">
@@ -105,7 +108,7 @@
               <div class="slider__swiper-slide swiper-slide">
                 <div class="slider__content">
                   <div class="slider__content-wrapper">
-                    <h1>Магические пейзажи Алтайского Края</h1>
+                    <h1>Магические&nbsp;пейзажи Алтайского Края</h1>
                     <p>Алтайский трекинг-тур - это&nbsp;захватывающее приключение с посещением магических и&nbsp;захватывающих дух ландшафтов Алтайских гор.</p>
                   </div>
                   <a class="slider__button button" href="#tours">Смотреть тур</a>
@@ -132,6 +135,65 @@
     </section>
 
   </main>
+  <footer class="footer" data-test="footer">
+    <div class="footer__container container">
+      <div class="footer__wrapper">
+        <a class="footer__logo" href="index.html">
+          <img class="footer__logo-image" src="img/footer-logo.svg" width="142" height="42" alt="Логотип компании">
+        </a>
+        <ul class="footer__nav-list">
+          <li>
+            <a class="footer__nav-link" href="#tours">Туры</a>
+          </li>
+          <li>
+            <a class="footer__nav-link" href="#study">Обучение</a>
+          </li>
+          <li>
+            <a class="footer__nav-link" href="#about">О нас</a>
+          </li>
+          <li>
+            <a class="footer__nav-link" href="#feedback">Отзывы</a>
+          </li>
+          <li>
+            <a class="footer__nav-link" href="#photos">Фотографии</a>
+          </li>
+          <li>
+            <a class="footer__nav-link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+        <a class="footer__phone" href="tel:8800725-32-32">8 800 725-32-32</a>
+      </div>
+      <div class="footer__social-wrapper">
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <span class="visually-hidden">Мы в Контакте</span>
+              <svg class="footer__icon" width="16" height="9">
+                <use href="/__spritemap#sprite-vk-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <span class="visually-hidden">Мы в Одноклассниках</span>
+              <svg class="footer__icon" width="9" height="16">
+                <use href="/__spritemap#sprite-odnoklassniki-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <span class="visually-hidden">Мы в Реддит</span>
+              <svg class="footer__icon" width="14" height="15">
+                <use href="/__spritemap#sprite-reddit-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a class="footer__copyright" href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
   <script type="module" src="js/main.js"></script>
 </body>
 

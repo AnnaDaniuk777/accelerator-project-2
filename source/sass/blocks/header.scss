@@ -129,14 +129,13 @@
     transform: translate(-50%, -50%);
     width: 26px;
     height: 26px;
-    background-size: contain;
+    background-size: 26px 26px;
     background-repeat: no-repeat;
     transition: opacity 0.3s ease;
   }
 
   &::before {
     background-image: url("../../img/sprite/burger-icon.svg");
-    // background-image: url("/__spritemap#sprite-burger-icon");
     opacity: 1;
   }
 
