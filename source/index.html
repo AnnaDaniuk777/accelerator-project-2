@@ -133,7 +133,49 @@
         </div>
       </div>
     </section>
-
+    <section class="contacts">
+      <div class="contacts__container container">
+        <div class="contacts__details-container">
+          <div class="contacts__text-wrapper">
+            <h2 class="contacts__title">Контакты</h2>
+            <p>Свяжитесь с нами любым удобным для вас способом или&nbsp;приходите&nbsp;к&nbsp;нам в гости. Мы будем рады поделиться увлекательными&nbsp;историями и подобрать для вас тур.</p>
+          </div>
+          <ul class="contacts__details-list">
+            <li class="contacts__details-item">
+              <h3 class="contacts__details-title">Телефон</h3>
+              <a class="contacts__details-info" href="tel:+7983745-45-45">+7 983 745-45-45</a>
+              <svg class="contacts__icon" width="20" height="20">
+                <use href="/__spritemap#sprite-phone-icon"></use>
+              </svg>
+            </li>
+            <li class="contacts__details-item">
+              <h3 class="contacts__details-title">Email</h3>
+              <a class="contacts__details-info" href="mailto:info@lifetour.com">info@lifetour.com</a>
+              <svg class="contacts__icon" width="20" height="14">
+                <use href="/__spritemap#sprite-mail-icon"></use>
+              </svg>
+            </li>
+            <li class="contacts__details-item">
+              <h3 class="contacts__details-title">Адрес</h3>
+              <p class="contacts__details-info">г.Москва, пр-т Мира, д.&nbsp;14&nbsp;,&nbsp;офис&nbsp;101</p>
+              <svg class="contacts__icon" width="15" height="20">
+                <use href="/__spritemap#sprite-pin-icon"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__map-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map.webp" width="600" height="324">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map.webp" width="768" height="340">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/map.webp" width="320" height="343">
+            <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/map.jpg" width="600" height="324">
+            <source type="image/jpeg" media="(min-width: 768px)" srcset="img/map.jpg" width="768" height="340">
+            <img class="contacts__map" src="img/map.jpg" width="320" height="343" alt="Карта турагентства по адресу: г. Москва, пр-т Мира, д. 14, офис 101">
+          </picture>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer" data-test="footer">
     <div class="footer__container container">
