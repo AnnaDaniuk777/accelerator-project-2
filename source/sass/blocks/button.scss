@@ -2,4 +2,30 @@
   border: none;
   background-color: transparent;
   padding: 0;
+  text-align: center;
+  cursor: pointer;
+
+  &:focus {
+    border: none;
+    outline: none;
+    color: #1c3374;
+    background-color: $white;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: #1c3374;
+    border: 1px solid #1c3374;
+  }
+
+  &:active {
+    background-color: #1c3374;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: #999999;
+    color: $white;
+    cursor: none;
+  }
 }

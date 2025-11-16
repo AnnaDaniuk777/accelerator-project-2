@@ -9,8 +9,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 60px;
     padding-bottom: 40px;
-    flex-direction: row;
-    gap: 100px;
+    gap: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -19,6 +18,8 @@
     padding-left: 120px;
     padding-right: 120px;
     align-items: center;
+    flex-direction: row;
+    gap: 100px;
   }
 }
 
