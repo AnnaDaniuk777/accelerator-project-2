@@ -16,10 +16,10 @@ body {
   color: $black;
   background-color: $white;
   margin: 0;
+}
 
-  &--no-scroll {
-    overflow: hidden;
-  }
+.page-body--no-scroll {
+  overflow: hidden;
 }
 
 .visually-hidden {
