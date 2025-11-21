@@ -1,0 +1,152 @@
+.gallery__container {
+  padding-top: 36px;
+  padding-bottom: 31px;
+  position: relative;
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 14px;
+      line-height: 22px;
+      padding-right: 300px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 119px;
+    padding-bottom: 46px;
+    padding-right: 350px;
+  }
+}
+
+.gallery__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 27px;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+
+  &::after {
+    content: attr(data-duplicate-text);
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: -1;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: inherit;
+
+    @media (min-width: $tablet-width) {
+      font-size: 40px;
+      line-height: 40px;
+      bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 55px;
+      line-height: 55px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 27px;
+  }
+}
+
+.gallery__slider-wrapper {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 3px;
+  overflow: hidden;
+}
+
+.gallery__slider-img {
+  display: block;
+}
+
+.gallery__slider-buttons {
+  display: none;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    right: 45px;
+    bottom: 21px;
+  }
+}
+
+.gallery__button {
+  display: block;
+  width: 37px;
+  height: 35px;
+  background-color: $blue;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    @include pseudo;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 1px;
+    background-color: $white;
+  }
+
+  &::after {
+    @include pseudo;
+
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-left: 1px solid $white;
+    border-bottom: 1px solid $white;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: #1c3374;
+    }
+
+    &::after {
+      border-left-color: #1c3374;
+      border-bottom-color: #1c3374;
+    }
+  }
+}
+
+.gallery__button--prev {
+  &::after {
+    left: 35%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.gallery__button--next {
+  &::after {
+    right: 35%;
+    transform: translateY(-50%) rotate(-135deg);
+  }
+}
