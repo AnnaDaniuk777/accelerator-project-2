@@ -129,20 +129,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 26px;
-    height: 26px;
-    background-size: 26px 26px;
+    background-color: $blue;
     background-repeat: no-repeat;
     transition: opacity 0.3s ease;
   }
 
   &::before {
-    background-image: url("../../img/sprite/burger-icon.svg");
+    background-image: url("/__spritemap#sprite-burger-icon-view");
+    background-size: 26px 20px;
+    width: 26px;
+    height: 20px;
     opacity: 1;
   }
 
   &::after {
-    background-image: url("../../img/sprite/cross-icon.svg");
+    background-image: url("/__spritemap#sprite-cross-icon-view");
+    background-size: 21px 21px;
+    width: 21px;
+    height: 21px;
     opacity: 0;
     top: 40%;
   }
