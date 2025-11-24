@@ -9,11 +9,13 @@ export const initGallerySlider = () => {
   const gallerySwiper = new Swiper(gallerySlider, {
     breakpoints: {
       320: {
-        slidesPerView: 2,
+        slidesPerView: 'auto',
+        spaceBetween: 3,
         loop: true
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
+        spaceBetween: 5,
         loop: true
       },
       1440: {

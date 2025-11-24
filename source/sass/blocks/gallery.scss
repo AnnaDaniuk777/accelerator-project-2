@@ -77,6 +77,15 @@
   gap: 5px;
   margin-bottom: 3px;
   overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+  }
+}
+
+.gallery .gallery__slider-item {
+  width: auto;
+  flex-shrink: 0;
 }
 
 .gallery__slider-img {
@@ -133,6 +142,17 @@
     &::after {
       border-left-color: #1c3374;
       border-bottom-color: #1c3374;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $white;
+    }
+
+    &::after {
+      border-left-color: $white;
+      border-bottom-color: $white;
     }
   }
 }
