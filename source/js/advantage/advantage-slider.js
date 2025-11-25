@@ -1,50 +1,81 @@
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+import { destroySwiper, debounce } from '../swiper/swiper-utils.js';
 import 'swiper/css';
 
-export const initAdvantageSlider = () => {
-  const sliderWrapper = document.querySelector('.advantage__slider-wrapper');
-  const prevButton = document.querySelector('.advantage__button--prev');
-  const nextButton = document.querySelector('.advantage__button--next');
+const advContainer = document.querySelector('.advantage__slider-wrapper');
+const advWrapper = document.querySelector('.advantage__list');
+const advSlides = document.querySelectorAll('.advantage__item');
+let advSwiper = null;
+let clonedSlide = null;
 
-  const advantageSwiper = new Swiper(sliderWrapper, {
-    slidesPerView: 'auto',
-    slidesPerGroup: 2,
-    spaceBetween: 20,
-    loop: true,
-    centeredSlides: true,
-    initialSlide: 2,
-    allowTouchMove: false,
-    simulateTouch: false,
+function initAdvantagesSwiper() {
+  const breakpoint = 1440;
 
-    on: {
-      init: function () {
-        if (window.innerWidth >= 1440) {
-          this.enable();
-        } else {
-          this.disable();
-        }
+  if (window.innerWidth >= breakpoint && !advSwiper) {
+    advContainer.classList.add('swiper');
+    advWrapper.classList.add('swiper-wrapper');
+
+    if (advSlides.length % 2 !== 0 && !clonedSlide) {
+      clonedSlide = advSlides[0].cloneNode(true);
+      clonedSlide.classList.add('advantage__item', 'swiper-slide');
+      clonedSlide.setAttribute('data-cloned', 'true');
+      advWrapper.appendChild(clonedSlide);
+    }
+
+    for (const slide of advSlides) {
+      slide.classList.add('swiper-slide');
+    }
+
+    advSwiper = new Swiper('.advantage__slider-wrapper', {
+      modules: [Navigation],
+      loop: true,
+      speed: 1000,
+      slidesPerView: 'auto',
+      slidesPerGroup: 2,
+      centeredSlides: true,
+      spaceBetween: 30,
+      initialSlide: 0,
+      loopAddBlankSlides: false,
+      loopedSlides: 4,
+      watchSlidesProgress: true,
+
+      navigation: {
+        nextEl: '.advantage__button--next',
+        prevEl: '.advantage__button--prev',
       },
-      resize: function () {
-        if (window.innerWidth >= 1440) {
-          this.enable();
-        } else {
-          this.disable();
+
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+
+      on: {
+        init: function () {
+          setTimeout(() => {
+            this.update();
+            this.slideToLoop(3, 0);
+          }, 100);
         }
       }
-    }
-  });
-
-  if (prevButton) {
-    prevButton.addEventListener('click', () => {
-      advantageSwiper.slidePrev();
     });
-  }
 
-  if (nextButton) {
-    nextButton.addEventListener('click', () => {
-      advantageSwiper.slideNext();
+  } else if (window.innerWidth < breakpoint && advSwiper) {
+    destroySwiper({
+      swiperInstance: advSwiper,
+      swiperContainer: advContainer,
+      wrapper: advWrapper,
+      slides: advSlides,
+      clonedSlide: clonedSlide
     });
+    advSwiper = null;
+    clonedSlide = null;
   }
+}
 
-  return advantageSwiper;
-};
+const debouncedResizeAdvantagesSwiper = debounce(initAdvantagesSwiper, 200);
+
+document.addEventListener('DOMContentLoaded', initAdvantagesSwiper);
+window.addEventListener('resize', debouncedResizeAdvantagesSwiper);
+
+export { initAdvantagesSwiper, debouncedResizeAdvantagesSwiper };

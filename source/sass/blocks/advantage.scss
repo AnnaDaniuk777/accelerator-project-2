@@ -13,9 +13,10 @@
 
   @media (min-width: $desktop-width) {
     position: relative;
+    display: block;
     padding: 135px 0 185px;
-    gap: 50px;
     max-width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -34,13 +35,17 @@
   @media (min-width: $desktop-width) {
     font-size: 35px;
     line-height: 35px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    text-align: center;
   }
 
   &::after {
     content: attr(data-duplicate-text);
     position: absolute;
-    bottom: 50%;
-    right: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
     opacity: 0.03;
     pointer-events: none;
     z-index: -1;
@@ -64,17 +69,20 @@
 .advantage .advantage__list {
   @include reset;
 
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   text-align: center;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $tablet-width-only) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     gap: 30px;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+    gap: 15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -99,6 +107,8 @@
       padding-top: 84px;
       font-size: 18px;
       line-height: 18px;
+      padding-right: 0;
+      padding-left: 0;
     }
   }
 
@@ -116,28 +126,35 @@
 
 .advantage .advantage__slider-wrapper {
   @media (min-width: $desktop-width) {
-    width: 100%;
-    overflow: hidden;
+    width: calc(100% + 200px);
+    margin-left: -100px;
+    margin-right: -100px;
+    padding: 0 100px;
   }
 }
 
 .advantage .advantage__item {
   position: relative;
   border: 1px solid rgb(2 102 193 / 0.1);
-  padding: 20px 10px;
+  padding: 19px 9px;
   width: 290px;
 
   @media (min-width: $tablet-width) {
     width: 324px;
-    height: 340px;
-    padding: 30px 20px;
+    padding: 29px 19px;
   }
 
   @media (min-width: $desktop-width) {
     width: 380px;
-    height: 329px;
     padding: 40px 20px;
+    height: 100%;
+    min-height: 329px;
     flex-shrink: 0;
+    transition: transform 0.3s ease;
+
+    .swiper-slide-blank {
+      display: none;
+    }
   }
 
   &::before {
@@ -155,10 +172,14 @@
 
     @media (min-width: $tablet-width) {
       top: 30px;
+      width: 48px;
+      height: 48px;
     }
 
     @media (min-width: $desktop-width) {
       top: 40px;
+      width: 54px;
+      height: 54px;
     }
   }
 }
@@ -197,7 +218,7 @@
     position: absolute;
     bottom: 100px;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
   }
 }
 
