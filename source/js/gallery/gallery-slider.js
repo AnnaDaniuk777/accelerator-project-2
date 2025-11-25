@@ -21,8 +21,6 @@ export const initGallerySlider = () => {
       1440: {
         slidesPerView: 5,
         loop: false,
-        allowTouchMove: false,
-        simulateTouch: false
       }
     },
 
