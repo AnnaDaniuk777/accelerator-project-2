@@ -1,0 +1,127 @@
+.about__container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    gap: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.about__img {
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    object-fit: cover;
+    position: absolute;
+    height: 350px;
+    left: 50%;
+    top: 134px;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    display: block;
+    height: auto;
+    transform: none;
+  }
+}
+
+.about .about__content-wrapper {
+  padding-top: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+    padding-right: 48px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 190px;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 42px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 25px;
+      line-height: 25px;
+      margin-bottom: 46px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 35px;
+      line-height: 35px;
+      margin-bottom: 57px;
+      padding-top: 45px;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 21px;
+      line-height: 21px;
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.about__img-wrapper {
+  @media (min-width: $tablet-width) {
+    min-width: 450px;
+    position: relative;
+    z-index: -2;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 660px;
+    position: static;
+  }
+}

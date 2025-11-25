@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lifetour</title>
-  <link rel="preload" href="fonts/Montserrat-Light.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
@@ -134,9 +134,30 @@
         </div>
       </div>
     </section>
+    <section class="about" data-test="about">
+      <div class="about__container">
+        <div class="about__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/about-desktop@1x.webp 1x, img/about-desktop@2x.webp 2x" width="660" height="498">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/about-tablet@1x.webp 1x, img/about-tablet@2x.webp 2x" width="542" height="350">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/about-mobile@1x.webp 1x, img/about-mobile@2x.webp 2x" width="434" height="400">
+            <source type="image/png" media="(min-width: 1440px)" srcset="img/about-desktop@1x.png 1x, img/about-desktop@2x.png 2x" width="660" height="498">
+            <source type="image/png" media="(min-width: 768px)" srcset="img/about-tablet@1x.png 1x, img/about-tablet@2x.png 2x" width="542" height="350">
+            <img class="about__img" src="img/about-mobile@1x.png" srcset="img/about-mobile@2x.png 2x" width="434" height="400" alt="Группа туристов спускается с горы">
+          </picture>
+        </div>
+        <div class="about__content-wrapper container">
+          <h2>О нас</h2>
+          <h3>История компании</h3>
+          <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам это настолько понравилось,&nbsp;что мы этим стали&nbsp;жить. Спустя&nbsp;5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
+          <h3>Наша цель</h3>
+          <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
+        </div>
+      </div>
+    </section>
     <section class="review" data-test="reviews">
-      <div class="review__container container">
-        <div class="review__text-wrapper">
+      <div class="review__container">
+        <div class="review__text-wrapper container">
           <h2 class="review__title" data-duplicate-text="Отзывы" aria-hidden="true">Отзывы</h2>
           <div class="review__slider-button">
             <button class="review__button review__button--prev button" type="button">
@@ -154,7 +175,7 @@
               <blockquote class="review__item">
                 <div class="review__image-wrapper">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-one-desktop@1x.webp 1x, img/reviewer-one-desktop@2x.webp 2x" width="284" height="463">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-one-desktop@1x.webp 1x, img/reviewer-one-desktop@2x.webp 2x" width="258" height="253">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-one-tablet@1x.webp 1x, img/reviewer-one-tablet@2x.webp 2x" width="253" height="418">
                     <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-one-mobile@1x.webp 1x, img/reviewer-one-mobile@2x.webp 2x" width="250" height="169">
                     <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-one-desktop@1x.jpg 1x, img/reviewer-one-desktop@2x.jpg 2x" width="258" height="253">
@@ -164,8 +185,10 @@
                 </div>
 
                 <div class="review__feedback-wrapper">
-                  <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
-                  <p>С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
+                  <div class="review__content-wrapper">
+                    <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
+                    <p>С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
+                  </div>
                   <cite class="review__user-name">Фролов Александр</cite>
                   <span class="review__user-details">38 лет, Москва</span>
                 </div>
@@ -174,18 +197,22 @@
 
             <li class="review__comments-item swiper-slide">
               <blockquote class="review__item">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-two-desktop@1x.webp 1x, img/reviewer-two-desktop@2x.webp 2x" width="284" height="463">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-two-tablet@1x.webp 1x, img/reviewer-two-tablet@2x.webp 2x" width="253" height="418">
-                  <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-two-mobile@1x.webp 1x, img/reviewer-two-mobile@2x.webp 2x" width="250" height="169">
-                  <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-two-desktop@1x.jpg 1x, img/reviewer-two-desktop@2x.jpg 2x" width="258" height="253">
-                  <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-two-tablet@1x.jpg 1x, img/reviewer-two-tablet@2x.jpg 2x" width="186" height="237">
-                  <img class="review__user-img" src="img/reviewer-two-mobile@1x.jpg" srcset="img/reviewer-two-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Ивана Соловьева в горах">
-                </picture>
+                <div class="review__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-two-desktop@1x.webp 1x, img/reviewer-two-desktop@2x.webp 2x" width="258" height="253">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-two-tablet@1x.webp 1x, img/reviewer-two-tablet@2x.webp 2x" width="253" height="418">
+                    <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-two-mobile@1x.webp 1x, img/reviewer-two-mobile@2x.webp 2x" width="250" height="169">
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-two-desktop@1x.jpg 1x, img/reviewer-two-desktop@2x.jpg 2x" width="258" height="253">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-two-tablet@1x.jpg 1x, img/reviewer-two-tablet@2x.jpg 2x" width="186" height="237">
+                    <img class="review__user-img" src="img/reviewer-two-mobile@1x.jpg" srcset="img/reviewer-two-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Ивана Соловьева в горах">
+                  </picture>
+                </div>
                 <div class="review__feedback-wrapper">
-                  <p>Хороший полноценный поход с разнообразными локациями. В начале дорога идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века.
-                    Было очень интересно!</p>
-                  <p>Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам. Всем советую этот тур.</p>
+                  <div class="review__content-wrapper">
+                    <p>Хороший полноценный поход с разнообразными локациями. В начале дорога идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века.
+                      Было очень интересно!</p>
+                    <p>Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам. Всем советую этот тур.</p>
+                  </div>
                   <cite class="review__user-name">Иван Соловьёв</cite>
                   <span class="review__user-details">25 лет, Владивосток</span>
                 </div>
@@ -194,17 +221,22 @@
 
             <li class="review__comments-item swiper-slide">
               <blockquote class="review__item">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-three-desktop@1x.webp 1x, img/reviewer-three-desktop@2x.webp 2x" width="284" height="463">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-three-tablet@1x.webp 1x, img/reviewer-three-tablet@2x.webp 2x" width="253" height="418">
-                  <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-three-mobile@1x.webp 1x, img/reviewer-three-mobile@2x.webp 2x" width="250" height="169">
-                  <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-three-desktop@1x.jpg 1x, img/reviewer-three-desktop@2x.jpg 2x" width="258" height="253">
-                  <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-three-tablet@1x.jpg 1x, img/reviewer-three-tablet@2x.jpg 2x" width="186" height="237">
-                  <img class="review__user-img" src="img/reviewer-three-mobile@1x.jpg" srcset="img/reviewer-three-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Евгении Баженовой в горах">
-                </picture>
+                <div class="review__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-three-desktop@1x.webp 1x, img/reviewer-three-desktop@2x.webp 2x" width="258" height="253">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-three-tablet@1x.webp 1x, img/reviewer-three-tablet@2x.webp 2x" width="253" height="418">
+                    <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-three-mobile@1x.webp 1x, img/reviewer-three-mobile@2x.webp 2x" width="250" height="169">
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-three-desktop@1x.jpg 1x, img/reviewer-three-desktop@2x.jpg 2x" width="258" height="253">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-three-tablet@1x.jpg 1x, img/reviewer-three-tablet@2x.jpg 2x" width="186" height="237">
+                    <img class="review__user-img" src="img/reviewer-three-mobile@1x.jpg" srcset="img/reviewer-three-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Евгении Баженовой в горах">
+                  </picture>
+                </div>
+
                 <div class="review__feedback-wrapper">
-                  <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.</p>
-                  <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
+                  <div class="review__content-wrapper">
+                    <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.</p>
+                    <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
+                  </div>
                   <cite class="review__user-name">Евгения Баженова</cite>
                   <span class="review__user-details">23 года, Кострома</span>
                 </div>
@@ -213,17 +245,22 @@
 
             <li class="review__comments-item swiper-slide">
               <blockquote class="review__item">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-four-desktop@1x.webp 1x, img/reviewer-four-desktop@2x.webp 2x" width="284" height="463">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-four-tablet@1x.webp 1x, img/reviewer-four-tablet@2x.webp 2x" width="253" height="418">
-                  <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-four-mobile@1x.webp 1x, img/reviewer-four-mobile@2x.webp 2x" width="250" height="169">
-                  <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-four-desktop@1x.jpg 1x, img/reviewer-four-desktop@2x.jpg 2x" width="258" height="253">
-                  <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-four-tablet@1x.jpg 1x, img/reviewer-four-tablet@2x.jpg 2x" width="186" height="237">
-                  <img class="review__user-img" src="img/reviewer-four-mobile@1x.jpg" srcset="img/reviewer-four-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Елены Пироговой в горах">
-                </picture>
+                <div class="review__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-four-desktop@1x.webp 1x, img/reviewer-four-desktop@2x.webp 2x" width="258" height="253">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-four-tablet@1x.webp 1x, img/reviewer-four-tablet@2x.webp 2x" width="253" height="418">
+                    <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-four-mobile@1x.webp 1x, img/reviewer-four-mobile@2x.webp 2x" width="250" height="169">
+                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-four-desktop@1x.jpg 1x, img/reviewer-four-desktop@2x.jpg 2x" width="258" height="253">
+                    <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-four-tablet@1x.jpg 1x, img/reviewer-four-tablet@2x.jpg 2x" width="186" height="237">
+                    <img class="review__user-img" src="img/reviewer-four-mobile@1x.jpg" srcset="img/reviewer-four-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Елены Пироговой в горах">
+                  </picture>
+                </div>
+
                 <div class="review__feedback-wrapper">
-                  <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
-                  <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
+                  <div class="review__content-wrapper">
+                    <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
+                    <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
+                  </div>
                   <cite class="review__user-name">Елена Пирогова</cite>
                   <span class="review__user-details">37 лет, Тюмень</span>
                 </div>
@@ -240,23 +277,23 @@
           <ul class="advantage__list swiper-wrapper">
             <li class="advantage__item advantage__item--shield-icon swiper-slide">
               <h3>Безопасность</h3>
-              <p>Уделяем внимание безопасности клиентов,&nbsp;внедряя строгие процедуры и протоколы безопасности. Имеем планы действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.</p>
+              <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий на&nbsp;случай непредвиденных обстоятельств и&nbsp;даем гарантию полной безопасности во&nbsp;время всего тура.</p>
             </li>
             <li class="advantage__item advantage__item--crown-icon swiper-slide">
               <h3>Экспертиза и знания</h3>
-              <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. Это гарантирует, что наши клиенты находятся&nbsp;в&nbsp;надёжных руках и могут в полной мере насладиться опытом без опасений.</p>
+              <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. Это гарантирует, что наши клиенты&nbsp;находятся в&nbsp;надежных руках и могут в полной мере насладиться опытом без опасений.</p>
             </li>
             <li class="advantage__item advantage__item--boot-icon swiper-slide">
               <h3>Оборудование и снаряжение</h3>
-              <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет клиентов от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически выгодным.</p>
+              <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет клиентов от&nbsp;необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически выгодным.</p>
             </li>
             <li class="advantage__item advantage__item--path-icon swiper-slide">
               <h3>Индивидуальные маршруты</h3>
-              <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства&nbsp;и&nbsp;интересам. Мы также можем адаптировать маршруты к вашим конкретным потребностям и&nbsp;предпочтениям,&nbsp; чтобы вы получили индивидуальный опыт.</p>
+              <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы также можем адаптировать маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный опыт.</p>
             </li>
             <li class="advantage__item advantage__item--leaf-icon swiper-slide">
               <h3>Бережное отношение к&nbsp;природе</h3>
-              <p>Уделяем первостепенное внимание охране&nbsp;окружающей среды и гарантируем,&nbsp;что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не&nbsp;оставлять следов».</p>
+              <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
             </li>
           </ul>
         </div>
