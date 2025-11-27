@@ -71,7 +71,7 @@
   padding: 0 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
+    padding: 0 45px;
   }
 
   @media (min-width: $desktop-width) {
@@ -84,14 +84,6 @@
   @include reset;
 
   display: flex;
-
-  @media (min-width: $tablet-width) {
-    padding-left: 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 0;
-  }
 }
 
 .review .review__comments-item {

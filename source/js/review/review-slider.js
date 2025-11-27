@@ -1,57 +1,76 @@
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
 
-export const initReviewSlider = () => {
-  const reviewSlider = document.querySelector('.review__slider');
+const reviewContainer = document.querySelector('.review__slider');
+let reviewSwiper = null;
+
+export function initReviewSwiper() {
+  const tabletBreakpoint = 768;
+  const desktopBreakpoint = 1440;
+
+  let slidesPerView = 1;
+  let spaceBetween = 15;
+
+  if (window.innerWidth >= tabletBreakpoint && window.innerWidth < desktopBreakpoint) {
+    slidesPerView = 'auto';
+    spaceBetween = 30;
+  } else if (window.innerWidth >= desktopBreakpoint) {
+    slidesPerView = 'auto';
+    spaceBetween = 120;
+  }
+
+  if (reviewSwiper) {
+    reviewSwiper.destroy(true, true);
+    reviewSwiper = null;
+  }
+
+  if (reviewContainer) {
+    reviewSwiper = new Swiper('.review__slider', {
+      modules: [Navigation],
+      slidesPerView: slidesPerView,
+      spaceBetween: spaceBetween,
+      speed: 500,
+      watchOverflow: true,
+      initialSlide: 0,
+
+      navigation: {
+        nextEl: '.review__button--next',
+        prevEl: '.review__button--prev',
+      },
+
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+
+      on: {
+        init: function () {
+          updateReviewNavigationButtons(this);
+        },
+        slideChange: function () {
+          updateReviewNavigationButtons(this);
+        }
+      }
+    });
+  }
+}
+
+function updateReviewNavigationButtons(swiper) {
   const prevButton = document.querySelector('.review__button--prev');
   const nextButton = document.querySelector('.review__button--next');
 
-  const reviewSwiper = new Swiper(reviewSlider, {
-    slidesPerView: 1,
-
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-      },
-      768: {
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-      },
-      1440: {
-        slidesPerView: 'auto',
-        spaceBetween: 120,
-      }
-    },
-
-    watchOverflow: true,
-  });
-
-  if (prevButton) {
-    prevButton.addEventListener('click', () => {
-      reviewSwiper.slidePrev();
-    });
+  if (prevButton && nextButton) {
+    prevButton.classList.toggle('review__button--disabled', swiper.isBeginning);
+    nextButton.classList.toggle('review__button--disabled', swiper.isEnd);
   }
+}
 
-  if (nextButton) {
-    nextButton.addEventListener('click', () => {
-      reviewSwiper.slideNext();
-    });
-  }
+let reviewResizeTimeout;
+function handleReviewResize() {
+  clearTimeout(reviewResizeTimeout);
+  reviewResizeTimeout = setTimeout(initReviewSwiper, 100);
+}
 
-  reviewSwiper.on('slideChange', () => {
-    updateButtonStates();
-  });
-
-  updateButtonStates();
-
-  function updateButtonStates() {
-    if (prevButton) {
-      prevButton.classList.toggle('review__button--disabled', reviewSwiper.isBeginning);
-    }
-    if (nextButton) {
-      nextButton.classList.toggle('review__button--disabled', reviewSwiper.isEnd);
-    }
-  }
-
-  return reviewSwiper;
-};
+document.addEventListener('DOMContentLoaded', initReviewSwiper);
+window.addEventListener('resize', handleReviewResize);
