@@ -4,6 +4,15 @@
   gap: 25px;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 56px;
+  }
 }
 
 .training__text-wrapper {
@@ -11,10 +20,23 @@
   flex-direction: column;
   gap: 35px;
 
+  @media (min-width: $tablet-width) {
+    gap: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 38px;
+  }
+
   p {
     font-size: 14px;
     line-height: 20px;
     margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -29,11 +51,13 @@
   @media (min-width: $tablet-width) {
     font-size: 25px;
     line-height: 25px;
+    padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 35px;
     line-height: 35px;
+    padding-top: 19px;
   }
 
   &::after {
@@ -57,19 +81,29 @@
     @media (min-width: $desktop-width) {
       font-size: 55px;
       line-height: 55px;
-      bottom: 50%;
+      bottom: 0;
     }
   }
 }
 
 .training__navigation-wrapper {
   @include flex-between;
+}
 
-  h3 {
-    font-size: 22px;
-    line-height: 22px;
-    font-weight: 800;
-    margin: 0;
+.training__slider-title {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+    line-height: 35px;
   }
 }
 
@@ -82,6 +116,14 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
 }
 
 .training__tutors-list {
@@ -101,6 +143,10 @@
     min-height: 388px;
     width: 213px;
   }
+
+  @media (min-width: $desktop-width) {
+    min-height: 356px;
+  }
 }
 
 .training .training__img {
@@ -114,6 +160,7 @@
   @include flex-between;
 
   align-items: flex-start;
+  gap: 15px;
 
   h4 {
     font-size: 14px;
@@ -255,6 +302,37 @@
   }
 }
 
+.training__process-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    gap: 104px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 23px;
+  }
+}
+
+.training__process-title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
+
 .training__process-list {
   @include reset;
 
@@ -262,6 +340,19 @@
   flex-direction: column;
   gap: 25px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 104px 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    padding-bottom: 14px;
+  }
 
   &::before {
     @include pseudo;
@@ -272,6 +363,19 @@
     left: 8px;
     top: 50%;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      width: 1186px;
+      height: 2px;
+      bottom: 0;
+      top: unset;
+      left: 14px;
+    }
   }
 }
 
@@ -281,6 +385,56 @@
   padding-left: 63px;
   padding-right: 26px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+    padding-right: 21px;
+    padding-left: 35px;
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 4;
+    }
+
+    &:nth-child(4) {
+      order: 2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 45px;
+    padding-right: 0;
+
+    &:nth-child(1) {
+      order: 1;
+      width: 253px;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+      width: 253px;
+    }
+
+    &:nth-child(3) {
+      order: 3;
+      width: 253px;
+    }
+
+    &:nth-child(4) {
+      order: 4;
+      width: 243px;
+    }
+  }
 
   &::before {
     @include pseudo;
@@ -292,6 +446,17 @@
     left: 2px;
     top: 50%;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      left: 7px;
+      top: unset;
+      bottom: -26px;
+    }
   }
 
   &::after {
@@ -305,6 +470,11 @@
     background-repeat: no-repeat;
     top: 0;
     left: 29px;
+
+    @media (min-width: $tablet-width) {
+      top: 0;
+      left: 0;
+    }
   }
 }
 
