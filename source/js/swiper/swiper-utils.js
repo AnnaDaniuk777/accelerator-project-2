@@ -1,18 +1,20 @@
-export function destroySwiper({ swiperInstance, swiperContainer, wrapper, slides, clonedSlide = null }) {
-  if (swiperInstance && !swiperInstance.destroyed) {
+export function destroySwiper({ swiperInstance, swiperContainer, wrapper, slides, clonedSlides }) {
+  if (swiperInstance) {
     swiperInstance.destroy(true, true);
   }
 
-  swiperContainer?.classList.remove('swiper');
-  wrapper?.classList.remove('swiper-wrapper');
+  swiperContainer.classList.remove('swiper');
+  wrapper.classList.remove('swiper-wrapper');
 
-  slides?.forEach((slide) => {
-    slide.classList.remove('swiper-slide');
+  clonedSlides.forEach((slide) => {
+    if (slide && slide.parentNode === wrapper) {
+      wrapper.removeChild(slide);
+    }
   });
 
-  if (clonedSlide && clonedSlide.parentNode) {
-    clonedSlide.remove();
-  }
+  slides.forEach((slide) => {
+    slide.classList.remove('swiper-slide');
+  });
 }
 
 export function debounce(func, wait) {

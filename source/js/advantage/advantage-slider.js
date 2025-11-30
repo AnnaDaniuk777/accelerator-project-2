@@ -7,7 +7,7 @@ const advContainer = document.querySelector('.advantage__slider-wrapper');
 const advWrapper = document.querySelector('.advantage__list');
 const advSlides = document.querySelectorAll('.advantage__item');
 let advSwiper = null;
-let clonedSlide = null;
+let clonedSlides = [];
 
 function initAdvantagesSwiper() {
   const breakpoint = 1440;
@@ -16,11 +16,15 @@ function initAdvantagesSwiper() {
     advContainer.classList.add('swiper');
     advWrapper.classList.add('swiper-wrapper');
 
-    if (advSlides.length % 2 !== 0 && !clonedSlide) {
-      clonedSlide = advSlides[0].cloneNode(true);
-      clonedSlide.classList.add('advantage__item', 'swiper-slide');
-      clonedSlide.setAttribute('data-cloned', 'true');
-      advWrapper.appendChild(clonedSlide);
+    if (advSlides.length > 0 && clonedSlides.length === 0) {
+      advSlides.forEach((slide, index) => {
+        const clonedSlide = slide.cloneNode(true);
+        clonedSlide.classList.add('advantage__item', 'swiper-slide');
+        clonedSlide.setAttribute('data-cloned', 'true');
+        clonedSlide.setAttribute('data-cloned-index', index);
+        advWrapper.appendChild(clonedSlide);
+        clonedSlides.push(clonedSlide);
+      });
     }
 
     for (const slide of advSlides) {
@@ -37,7 +41,7 @@ function initAdvantagesSwiper() {
       spaceBetween: 30,
       initialSlide: 0,
       loopAddBlankSlides: false,
-      loopedSlides: 4,
+      loopedSlides: advSlides.length,
       watchSlidesProgress: true,
 
       navigation: {
@@ -54,7 +58,7 @@ function initAdvantagesSwiper() {
         init: function () {
           setTimeout(() => {
             this.update();
-            this.slideToLoop(3, 0);
+            this.slideToLoop(2, 0);
           }, 100);
         }
       }
@@ -66,10 +70,10 @@ function initAdvantagesSwiper() {
       swiperContainer: advContainer,
       wrapper: advWrapper,
       slides: advSlides,
-      clonedSlide: clonedSlide
+      clonedSlides: clonedSlides
     });
     advSwiper = null;
-    clonedSlide = null;
+    clonedSlides = [];
   }
 }
 
