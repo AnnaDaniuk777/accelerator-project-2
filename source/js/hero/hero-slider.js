@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 
-export function initHeroSlider() {
+export function initHeroSwiper() {
   const initSwiper = new Swiper('.slider__swiper', {
     loop: true,
     simulateTouch: false,

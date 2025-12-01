@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 
-export const initGallerySlider = () => {
+export const initGallerySwiper = () => {
   const gallerySlider = document.querySelector('.gallery__slider-wrapper');
   const prevButton = document.querySelector('.gallery__button--prev');
   const nextButton = document.querySelector('.gallery__button--next');
