@@ -56,7 +56,6 @@
         <div class="hero__slider slider">
           <div class="slider__swiper swiper">
             <div class="slider__swiper-wrapper swiper-wrapper">
-              <!-- Слайд 1 -->
               <div class="slider__swiper-slide swiper-slide">
                 <picture>
                   <source type="image/webp" srcset="img/hero-slider-one.webp" width="1440" height="800">
@@ -76,8 +75,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Слайд 2 -->
               <div class="slider__swiper-slide slider__swiper-slide--cards swiper-slide">
                 <picture>
                   <source type="image/webp" srcset="img/hero-slider-two.webp" width="1440" height="800">
@@ -103,8 +100,6 @@
                   </picture>
                 </div>
               </div>
-
-              <!-- Слайд 3 -->
               <div class="slider__swiper-slide swiper-slide">
                 <picture>
                   <source type="image/webp" srcset="img/hero-slider-three.webp" width="1440" height="800">
@@ -116,7 +111,7 @@
                       <h1>Магические&nbsp;пейзажи Алтайского Края</h1>
                       <p>Алтайский трекинг-тур - это&nbsp;захватывающее приключение с посещением магических и&nbsp;захватывающих дух ландшафтов Алтайских гор.</p>
                     </div>
-                    <a class="slider__button button" href="#tours">Смотреть тур</a>
+                    <a class="slider__button button" href="#tour-offer">Смотреть тур</a>
                     <div class="slider__details">
                       <span class="slider__text slider__text--duration">8 дней/7 ночей</span>
                       <span class="slider__text slider__text--difficulty">Лёгкая сложность</span>
@@ -134,155 +129,278 @@
         </div>
       </div>
     </section>
-    <section class="training" data-test="training">
-      <div class="training__container container">
-        <div class="training__text-wrapper">
-          <h2 class="training__title" data-duplicate-text="Обучение" aria-hidden="true">Обучение</h2>
-          <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
-        </div>
-        <div class="training__slider-wrapper">
-          <div class="training__navigation-wrapper">
-            <h3 class="training__slider-title">Наши инструкторы</h3>
-            <div class="training__slider-button">
-              <button class="training__button training__button--prev button" type="button">
+    <div class="decorative__section-wrapper">
+      <section class="tours" data-test="tours">
+        <div class="tours__container container">
+          <div class="tours__navigation-wrapper">
+            <h2 class="tours__title" data-duplicate-text="Ближайшие туры" aria-hidden="true">Ближайшие туры</h2>
+            <div class="tours__slider-button">
+              <button class="tours__button tours__button--prev button" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="training__button training__button--next button" type="button">
+              <button class="tours__button tours__button--next button" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
             </div>
           </div>
-          <div class="training__tutors-wrapper">
-            <ul class="training__tutors-list swiper-wrapper">
-              <li class="training__tutors-item swiper-slide">
-                <div class="training__img-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 320px)" srcset="img/tutor-one@1x.webp 1x, img/tutor-one@2x.webp 2x" width="260" height="200">
-                    <img class="training__img" src="img/tutor-one@1x.jpg" srcset="img/tutor-one@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора Александра Прокофьева">
-                  </picture>
+          <div class="tours__swiper swiper">
+            <ul class="tours__list swiper-wrapper">
+              <li class="tours__item tours__item--caucas swiper-slide">
+                <div class="tours__details-wrapper">
+                  <span class="tours__details tours__details--place">Кавказ</span>
+                  <span class="tours__details tours__details--day">4 дня</span>
+                  <span class="tours__details tours__details--night">3 ночи</span>
                 </div>
-                <div class="training__social-wrapper">
-                  <h4>Александр<br>Прокофьев</h4>
-                  <a class="training__social-link" href="#">
-                    <span class="visually-hidden">Страница Афанасия Прокофьева в Контакте</span>
-                    <svg class="training__icon" width="14" height="8">
-                      <use href="/__spritemap__535b6710#sprite-vk-icon"></use>
-                    </svg>
-                  </a>
+                <h3 class="tours__slider-title">Путешествие вокруг Эльбруса</h3>
+                <div class="tours__decorative">
+                  <span class="visually-hidden">Декоративная линия-разделитель между заголовком и таблицей с данными</span>
                 </div>
-                <div class="training__tutors-text-wrapper">
-                  <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
-                </div>
+                <table class="tours__details-table">
+                  <tbody>
+                    <tr>
+                      <td class="tours__description">Сложность:</td>
+                      <td class="tours__description">Даты набора:</td>
+                      <td class="tours__description">Группа:</td>
+                    </tr>
+                    <tr>
+                      <th class="tours__value tours__value--four-stars">
+                        <span class="visually-hidden">4 звезды</span>
+                      </th>
+                      <th class="tours__value">12.06–19.06</th>
+                      <th class="tours__value">до 15 чел.</th>
+                    </tr>
+                  </tbody>
+                </table>
               </li>
-
-              <li class="training__tutors-item swiper-slide">
-                <div class="training__img-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 320px)" srcset="img/tutor-two@1x.webp 1x, img/tutor-two@2x.webp 2x" width="260" height="200">
-                    <img class="training__img" src="img/tutor-two@1x.jpg" srcset="img/tutor-two@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора Светланы Афиногеновой">
-                  </picture>
+              <li class="tours__item tours__item--altai swiper-slide">
+                <div class="tours__details-wrapper">
+                  <span class="tours__details tours__details--place">Алтай</span>
+                  <span class="tours__details tours__details--day">14 дней</span>
+                  <span class="tours__details tours__details--night">13 ночей</span>
                 </div>
-                <div class="training__social-wrapper">
-                  <h4>Светлана<br>Афиногенова</h4>
-                  <a class="training__social-link" href="#">
-                    <span class="visually-hidden">Страница Светланы Афиногеновой в Контакте</span>
-                    <svg class="training__icon" width="14" height="8">
-                      <use href="/__spritemap__535b6710#sprite-vk-icon"></use>
-                    </svg>
-                  </a>
+                <h3 class="tours__slider-title">Путь к подножию Белухи</h3>
+                <div class="tours__decorative">
+                  <span class="visually-hidden">Декоративная линия-разделитель между заголовком и таблицей с данными</span>
                 </div>
-                <div class="training__tutors-text-wrapper">
-                  <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
-                </div>
+                <table class="tours__details-table">
+                  <tbody>
+                    <tr>
+                      <td class="tours__description">Сложность:</td>
+                      <td class="tours__description">Даты набора:</td>
+                      <td class="tours__description">Группа:</td>
+                    </tr>
+                    <tr>
+                      <th class="tours__value tours__value--three-stars">
+                        <span class="visually-hidden">3 звезды</span>
+                      </th>
+                      <th class="tours__value">14.06–23.06</th>
+                      <th class="tours__value">до 25 чел.</th>
+                    </tr>
+                  </tbody>
+                </table>
               </li>
-
-              <li class="training__tutors-item swiper-slide">
-                <div class="training__img-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 320px)" srcset="img/tutor-three@1x.webp 1x, img/tutor-three@2x.webp 2x" width="260" height="200">
-                    <img class="training__img" src="img/tutor-three@1x.jpg" srcset="img/tutor-three@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора Надежды Колесниченко">
-                  </picture>
+              <li class="tours__item tours__item--adygea swiper-slide">
+                <div class="tours__details-wrapper">
+                  <span class="tours__details tours__details--place">Адыгея</span>
+                  <span class="tours__details tours__details--day">7 дней</span>
+                  <span class="tours__details tours__details--night">6 ночей</span>
                 </div>
-                <div class="training__social-wrapper">
-                  <h4>Надежда<br>Колесниченко</h4>
-                  <a class="training__social-link" href="#">
-                    <span class="visually-hidden">Страница Надежды Колесниченко в Контакте</span>
-                    <svg class="training__icon" width="14" height="8">
-                      <use href="/__spritemap__535b6710#sprite-vk-icon"></use>
-                    </svg>
-                  </a>
+                <h3 class="tours__slider-title">Через Фишт к Чёрному морю и обратно</h3>
+                <div class="tours__decorative">
+                  <span class="visually-hidden">Декоративная линия-разделитель между заголовком и таблицей с данными</span>
                 </div>
-                <div class="training__tutors-text-wrapper">
-                  <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
-                </div>
+                <table class="tours__details-table">
+                  <tbody>
+                    <tr>
+                      <td class="tours__description">Сложность:</td>
+                      <td class="tours__description">Даты набора:</td>
+                      <td class="tours__description">Группа:</td>
+                    </tr>
+                    <tr>
+                      <th class="tours__value tours__value--four-stars">
+                        <span class="visually-hidden">4 звезды</span>
+                      </th>
+                      <th class="tours__value">15.07–19.07</th>
+                      <th class="tours__value">до 22 чел.</th>
+                    </tr>
+                  </tbody>
+                </table>
               </li>
-
-              <li class="training__tutors-item swiper-slide">
-                <div class="training__img-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 320px)" srcset="img/tutor-four@1x.webp 1x, img/tutor-four@2x.webp 2x" width="260" height="200">
-                    <img class="training__img" src="img/tutor-four@1x.jpg" srcset="img/tutor-four@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора Федора Кайгородова">
-                  </picture>
+              <li class="tours__item tours__item--ural swiper-slide">
+                <div class="tours__details-wrapper">
+                  <span class="tours__details tours__details--place">Урал</span>
+                  <span class="tours__details tours__details--day">9 дней</span>
+                  <span class="tours__details tours__details--night">10 ночей</span>
                 </div>
-                <div class="training__social-wrapper">
-                  <h4>Федор<br>Кайгородов</h4>
-                  <a class="training__social-link" href="#">
-                    <span class="visually-hidden">Страница Федора Кайгородова в Контакте</span>
-                    <svg class="training__icon" width="14" height="8">
-                      <use href="/__spritemap__535b6710#sprite-vk-icon"></use>
-                    </svg>
-                  </a>
+                <h3 class="tours__slider-title">Восхождение Манарага</h3>
+                <div class="tours__decorative">
+                  <span class="visually-hidden">Декоративная линия-разделитель между заголовком и таблицей с данными</span>
                 </div>
-                <div class="training__tutors-text-wrapper">
-                  <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
-                </div>
+                <table class="tours__details-table">
+                  <tbody>
+                    <tr>
+                      <td class="tours__description">Сложность:</td>
+                      <td class="tours__description">Даты набора:</td>
+                      <td class="tours__description">Группа:</td>
+                    </tr>
+                    <tr>
+                      <th class="tours__value tours__value--five-stars">
+                        <span class="visually-hidden">5 звезд</span>
+                      </th>
+                      <th class="tours__value">12.07–19.07</th>
+                      <th class="tours__value">до 7 чел.</th>
+                    </tr>
+                  </tbody>
+                </table>
               </li>
-
-              <li class="training__tutors-item swiper-slide">
-                <div class="training__img-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 320px)" srcset="img/tutor-five@1x.webp 1x, img/tutor-five@2x.webp 2x" width="260" height="200">
-                    <img class="training__img" src="img/tutor-five@1x.jpg" srcset="img/tutor-five@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора Даниэля Васнецова">
-                  </picture>
-                </div>
-                <div class="training__social-wrapper">
-                  <h4>Даниэль<br>Васнецов</h4>
-                  <a class="training__social-link" href="#">
-                    <span class="visually-hidden">Страница Даниэля Васнецова в Контакте</span>
-                    <svg class="training__icon" width="14" height="8">
-                      <use href="/__spritemap__535b6710#sprite-vk-icon"></use>
-                    </svg>
-                  </a>
-                </div>
-                <div class="training__tutors-text-wrapper">
-                  <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
-                </div>
+            </ul>
+          </div>
+          <a class="tours__catalog-link" href="#tours">Показать все туры</a>
+        </div>
+      </section>
+      <section class="training" data-test="training">
+        <div class="training__container container">
+          <div class="training__text-wrapper">
+            <h2 class="training__title" data-duplicate-text="Обучение" aria-hidden="true">Обучение</h2>
+            <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+          </div>
+          <div class="training__slider-wrapper">
+            <div class="training__navigation-wrapper">
+              <h3 class="training__slider-title">Наши инструкторы</h3>
+              <div class="training__slider-button">
+                <button class="training__button training__button--prev button" type="button">
+                  <span class="visually-hidden">Предыдущий слайд</span>
+                </button>
+                <button class="training__button training__button--next button" type="button">
+                  <span class="visually-hidden">Следующий слайд</span>
+                </button>
+              </div>
+            </div>
+            <div class="training__tutors-wrapper">
+              <ul class="training__tutors-list swiper-wrapper">
+                <li class="training__tutors-item swiper-slide">
+                  <div class="training__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/tutor-one@1x.webp 1x, img/tutor-one@2x.webp 2x" width="260" height="200">
+                      <img class="training__img" src="img/tutor-one@1x.jpg" srcset="img/tutor-one@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора Александра Прокофьева">
+                    </picture>
+                  </div>
+                  <div class="training__social-wrapper">
+                    <h4>Александр<br>Прокофьев</h4>
+                    <a class="training__social-link" href="#">
+                      <span class="visually-hidden">Страница Афанасия Прокофьева в Контакте</span>
+                      <svg class="training__icon" width="14" height="8">
+                        <use href="/__spritemap__535b6710#sprite-vk-icon"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="training__tutors-text-wrapper">
+                    <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
+                  </div>
+                </li>
+                <li class="training__tutors-item swiper-slide">
+                  <div class="training__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/tutor-two@1x.webp 1x, img/tutor-two@2x.webp 2x" width="260" height="200">
+                      <img class="training__img" src="img/tutor-two@1x.jpg" srcset="img/tutor-two@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора Светланы Афиногеновой">
+                    </picture>
+                  </div>
+                  <div class="training__social-wrapper">
+                    <h4>Светлана<br>Афиногенова</h4>
+                    <a class="training__social-link" href="#">
+                      <span class="visually-hidden">Страница Светланы Афиногеновой в Контакте</span>
+                      <svg class="training__icon" width="14" height="8">
+                        <use href="/__spritemap__535b6710#sprite-vk-icon"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="training__tutors-text-wrapper">
+                    <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
+                  </div>
+                </li>
+                <li class="training__tutors-item swiper-slide">
+                  <div class="training__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/tutor-three@1x.webp 1x, img/tutor-three@2x.webp 2x" width="260" height="200">
+                      <img class="training__img" src="img/tutor-three@1x.jpg" srcset="img/tutor-three@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора Надежды Колесниченко">
+                    </picture>
+                  </div>
+                  <div class="training__social-wrapper">
+                    <h4>Надежда<br>Колесниченко</h4>
+                    <a class="training__social-link" href="#">
+                      <span class="visually-hidden">Страница Надежды Колесниченко в Контакте</span>
+                      <svg class="training__icon" width="14" height="8">
+                        <use href="/__spritemap__535b6710#sprite-vk-icon"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="training__tutors-text-wrapper">
+                    <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
+                  </div>
+                </li>
+                <li class="training__tutors-item swiper-slide">
+                  <div class="training__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/tutor-four@1x.webp 1x, img/tutor-four@2x.webp 2x" width="260" height="200">
+                      <img class="training__img" src="img/tutor-four@1x.jpg" srcset="img/tutor-four@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора Федора Кайгородова">
+                    </picture>
+                  </div>
+                  <div class="training__social-wrapper">
+                    <h4>Федор<br>Кайгородов</h4>
+                    <a class="training__social-link" href="#">
+                      <span class="visually-hidden">Страница Федора Кайгородова в Контакте</span>
+                      <svg class="training__icon" width="14" height="8">
+                        <use href="/__spritemap__535b6710#sprite-vk-icon"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="training__tutors-text-wrapper">
+                    <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
+                  </div>
+                </li>
+                <li class="training__tutors-item swiper-slide">
+                  <div class="training__img-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/tutor-five@1x.webp 1x, img/tutor-five@2x.webp 2x" width="260" height="200">
+                      <img class="training__img" src="img/tutor-five@1x.jpg" srcset="img/tutor-five@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора Даниэля Васнецова">
+                    </picture>
+                  </div>
+                  <div class="training__social-wrapper">
+                    <h4>Даниэль<br>Васнецов</h4>
+                    <a class="training__social-link" href="#">
+                      <span class="visually-hidden">Страница Даниэля Васнецова в Контакте</span>
+                      <svg class="training__icon" width="14" height="8">
+                        <use href="/__spritemap__535b6710#sprite-vk-icon"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="training__tutors-text-wrapper">
+                    <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="training__process-wrapper">
+            <h3 class="training__process-title">Процесс обучения</h3>
+            <ul class="training__process-list">
+              <li class="training__process-item training__process-item--map">
+                Изучение спортивного туристского движения
               </li>
-
+              <li class="training__process-item training__process-item--boot">
+                Подготовка и техническое снаряжение в походах
+              </li>
+              <li class="training__process-item training__process-item--tree">
+                Лекции по окружающей среде, экологии и гигиене
+              </li>
+              <li class="training__process-item training__process-item--mountain">
+                Разъяснение сложности горных препятствий
+              </li>
             </ul>
           </div>
         </div>
-
-        <div class="training__process-wrapper">
-          <h3 class="training__process-title">Процесс обучения</h3>
-          <ul class="training__process-list">
-            <li class="training__process-item training__process-item--map">
-              Изучение спортивного туристского движения
-            </li>
-            <li class="training__process-item training__process-item--boot">
-              Подготовка и техническое снаряжение в походах
-            </li>
-            <li class="training__process-item training__process-item--tree">
-              Лекции по окружающей среде, экологии и гигиене
-            </li>
-            <li class="training__process-item training__process-item--mountain">
-              Разъяснение сложности горных препятствий
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
+      </section>
+    </div>
     <section class="about" data-test="about">
       <div class="about__container">
         <div class="about__img-wrapper">
@@ -317,7 +435,6 @@
             </button>
           </div>
         </div>
-
         <div class="review__slider swiper">
           <ul class="review__comments-list swiper-wrapper">
             <li class="review__comments-item swiper-slide">
@@ -332,7 +449,6 @@
                     <img class="review__user-img" src="img/reviewer-one-mobile@1x.jpg" srcset="img/reviewer-one-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Фролова Александра в горах">
                   </picture>
                 </div>
-
                 <div class="review__feedback-wrapper">
                   <div class="review__content-wrapper">
                     <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
@@ -343,7 +459,6 @@
                 </div>
               </blockquote>
             </li>
-
             <li class="review__comments-item swiper-slide">
               <blockquote class="review__item">
                 <div class="review__image-wrapper">
@@ -367,7 +482,6 @@
                 </div>
               </blockquote>
             </li>
-
             <li class="review__comments-item swiper-slide">
               <blockquote class="review__item">
                 <div class="review__image-wrapper">
@@ -380,7 +494,6 @@
                     <img class="review__user-img" src="img/reviewer-three-mobile@1x.jpg" srcset="img/reviewer-three-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Евгении Баженовой в горах">
                   </picture>
                 </div>
-
                 <div class="review__feedback-wrapper">
                   <div class="review__content-wrapper">
                     <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.</p>
@@ -391,7 +504,6 @@
                 </div>
               </blockquote>
             </li>
-
             <li class="review__comments-item swiper-slide">
               <blockquote class="review__item">
                 <div class="review__image-wrapper">
@@ -404,7 +516,6 @@
                     <img class="review__user-img" src="img/reviewer-four-mobile@1x.jpg" srcset="img/reviewer-four-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Елены Пироговой в горах">
                   </picture>
                 </div>
-
                 <div class="review__feedback-wrapper">
                   <div class="review__content-wrapper">
                     <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
@@ -648,6 +759,7 @@
       </div>
     </div>
   </footer>
+  <div class="overlay"></div>
   <script type="module" src="js/main.js"></script>
 </body>
 
