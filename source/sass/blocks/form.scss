@@ -6,14 +6,14 @@
   background-size: cover;
   display: block;
 
-  @media (resolution >= 2dppx) {
+  @media (resolution >=2dppx) {
     background-image: url("../../img/form-mobile-background@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
     background-image: url("../../img/form-tablet-background@1x.jpg");
 
-    @media (resolution >= 2dppx) {
+    @media (resolution >=2dppx) {
       background-image: url("../../img/form-tablet-background@2x.jpg");
     }
   }
@@ -21,7 +21,7 @@
   @media (min-width: $desktop-width) {
     background-image: url("../../img/form-desktop-background@1x.jpg");
 
-    @media (resolution >= 2dppx) {
+    @media (resolution >=2dppx) {
       background-image: url("../../img/form-desktop-background@2x.jpg");
     }
   }
@@ -147,9 +147,8 @@
 
   &:disabled {
     border-color: #999999;
-    color: #999999;
+    color: rgb(153 153 153 / 0.5);
     cursor: none;
-    opacity: 0.6;
   }
 }
 
@@ -161,7 +160,7 @@
   padding: 21px 19px;
   width: 258px;
   border: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
   @media (min-width: $tablet-width) {
     width: 360px;
@@ -172,6 +171,62 @@
   }
 }
 
-.form__input:invalid {
+.form .form__button {
+  &:hover {
+    background-color: $white;
+    border: none;
+    border-color: #1c3374;
+    color: #1c3374;
+  }
+}
+
+.form__field {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
+.form__error {
+  color: #ff121f;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 4px;
+  min-height: 14px;
+  text-align: center;
+  width: 258px;
+
+  @media (min-width: $tablet-width) {
+    width: 360px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.form__input--error {
+  border-color: #ff121f;
+  color: rgb(45 56 63 / 0.5);
+
+
+  &:hover,
+  &:focus {
+    border-color: #ff121f;
+  }
+}
+
+.form__input:invalid:not(:focus):not(:placeholder-shown) {
   box-shadow: none;
 }

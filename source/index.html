@@ -129,7 +129,7 @@
         </div>
       </div>
     </section>
-    <div class="decorative__section-wrapper">
+    <div class="decorative">
       <section class="tours" data-test="tours">
         <div class="tours__container container">
           <div class="tours__navigation-wrapper">
@@ -413,7 +413,7 @@
             <img class="about__img" src="img/about-mobile@1x.png" srcset="img/about-mobile@2x.png 2x" width="434" height="400" alt="Группа туристов спускается с горы">
           </picture>
         </div>
-        <div class="about__content-wrapper container">
+        <div class="about__content-wrapper">
           <h2>О нас</h2>
           <h3>История компании</h3>
           <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам это настолько понравилось,&nbsp;что мы этим стали&nbsp;жить. Спустя&nbsp;5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
@@ -642,15 +642,25 @@
           <p>Заполните форму и&nbsp;наш&nbsp;оператор свяжется&nbsp;с&nbsp;вами&nbsp;для&nbsp;консультации.</p>
         </div>
         <div class="form__wrapper">
-          <form class="form__details" action="https://echo.htmlacademy.ru" method="post">
-            <label class="form__label">
-              <span class="visually-hidden">Телефон</span>
-              <input class="form__input" name="phone" type="tel" placeholder="Телефон" title="+7 (000)-000-00-00" pattern="\+7\s\(\d{3}\)-\d{3}-\d{2}-\d{2}" required>
-            </label>
-            <label class="form__label">
-              <span class="visually-hidden">Email</span>
-              <input class="form__input" name="email" type="email" placeholder="Email" required>
-            </label>
+          <form class="form__details" id="question-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form__field">
+              <label class="form__label" for="phone">
+                <span class="visually-hidden">Телефон</span>
+                <input class="form__input" id="phone" name="phone" type="tel" placeholder="Телефон" title="Введите телефон в формате: +7 (XXX)-XXX-XX-XX" required data-mask="phone">
+                <span class="form__error" aria-live="polite">
+                  <span class="visually-hidden">Ошибка об отправке формы</span>
+                </span>
+              </label>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="email">
+                <span class="visually-hidden">Email</span>
+                <input class="form__input" id="email" name="email" type="email" placeholder="Email" title="Введите корректный email адрес" required data-pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Zа-яА-ЯёЁ]{2,}$">
+                <span class="form__error" aria-live="polite">
+                  <span class="visually-hidden">Ошибка об отправке формы</span>
+                </span>
+              </label>
+            </div>
             <button class="form__button button" type="submit">Отправить</button>
           </form>
         </div>
