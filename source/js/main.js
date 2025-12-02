@@ -5,6 +5,7 @@ import { initAdvantagesSwiper } from './advantage/advantage-slider.js';
 import { initReviewSwiper } from './review/review-slider.js';
 import { initTrainingSwiper } from './training/training-slider.js';
 import { initToursSwiper } from './tours/tours-slider.js';
+import { initFormValidation } from './form/form-validation.js';
 
 const initSliders = () => {
   initHeroSwiper();
@@ -24,6 +25,7 @@ window.addEventListener('resize', () => {
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSliders();
+  initFormValidation();
 });
 
 
