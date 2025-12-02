@@ -1,3 +1,8 @@
+.tours {
+  position: relative;
+  z-index: 2;
+}
+
 .tours__container {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -36,7 +41,6 @@
   @media (min-width: $tablet-width) {
     font-size: 25px;
     line-height: 25px;
-    min-width: 700px;
     padding-top: 20px;
     padding-bottom: 5px;
   }
@@ -59,6 +63,7 @@
     font-size: 26px;
     line-height: 26px;
     font-weight: inherit;
+    white-space: nowrap;
 
     @media (min-width: $tablet-width) {
       font-size: 40px;

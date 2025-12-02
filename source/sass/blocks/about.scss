@@ -24,11 +24,12 @@
   @media (min-width: $tablet-width) {
     object-fit: cover;
     position: absolute;
-    height: 350px;
-    left: 50%;
-    top: 134px;
-    transform: translateX(-50%);
+    height: auto;
+    width: 120%;
+    left: 0;
+    top: calc(50% - 197px);
     z-index: -1;
+    max-width: none;
   }
 
   @media (min-width: $desktop-width) {
