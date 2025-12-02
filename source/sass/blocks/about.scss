@@ -41,11 +41,13 @@
 }
 
 .about .about__content-wrapper {
-  padding-top: 16px;
+  padding-top: 17px;
+  padding-right: 15px;
+  padding-left: 15px;
 
   @media (min-width: $tablet-width) {
     padding-top: 20px;
-    padding-right: 48px;
+    padding-right: 43px;
     padding-left: 0;
   }
 
@@ -79,7 +81,7 @@
     line-height: 16px;
     font-weight: 700;
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 
     @media (min-width: $tablet-width) {
       font-size: 18px;
@@ -110,7 +112,7 @@
   }
 
   p:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
   }
 }
 
