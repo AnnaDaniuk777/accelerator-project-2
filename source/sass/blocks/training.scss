@@ -14,6 +14,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 40px;
     padding-bottom: 40px;
+    gap: 27px;
     position: relative;
 
     &::after {
@@ -48,6 +49,7 @@
 
   @media (min-width: $desktop-width) {
     gap: 56px;
+    padding-top: 47px;
   }
 }
 
@@ -57,11 +59,11 @@
   gap: 33px;
 
   @media (min-width: $tablet-width) {
-    gap: 36px;
+    gap: 34px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 38px;
+    gap: 30px;
   }
 
   p {
@@ -72,6 +74,10 @@
     @media (min-width: $tablet-width) {
       font-size: 16px;
       line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 330px;
     }
   }
 }
@@ -384,7 +390,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 104px 174px;
+    gap: 105px 134px;
   }
 
   @media (min-width: $desktop-width) {

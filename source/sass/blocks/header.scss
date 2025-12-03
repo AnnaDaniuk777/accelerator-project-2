@@ -67,10 +67,6 @@
   text-transform: uppercase;
   transition: opacity 0.3s ease;
 
-  &:hover {
-    opacity: 0.8;
-  }
-
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 16px;
@@ -81,6 +77,24 @@
   letter-spacing: normal;
   font-weight: 600;
   display: block;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgb(255 255 255 / 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    color: $black;
+  }
+
+  &:active {
+    color: #1c3374;
+  }
+
+  &:disabled {
+    color: #999999;
+  }
 
   @media (min-width: $desktop-width) {
     font-size: 18px;
@@ -93,6 +107,39 @@
 }
 
 .header__nav-link {
+  position: relative;
+  transition: color 0.3s ease, border 0.3s ease;
+
+  &::after {
+    @include pseudo;
+
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    left: 0;
+    bottom: -3px;
+    display: none;
+  }
+
+  &:hover {
+    &::after {
+      display: block;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $white;
+  }
+
+  &:active {
+    color: #1c3374;
+  }
+
+  &:disabled {
+    color: #999999;
+  }
+
   @media (min-width: $desktop-width) {
     text-transform: none;
     font-weight: 400;
@@ -133,6 +180,11 @@
     background-color: $blue;
     background-repeat: no-repeat;
     transition: opacity 0.3s ease;
+
+    @media (min-width: $tablet-width) {
+      top: 0;
+      transform: translateX(-50%);
+    }
   }
 
   &::before {
@@ -166,6 +218,15 @@
 .header__logo {
   max-width: 100%;
   overflow: hidden;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (max-width: $mobile-width-only) {
     grid-area: logo;

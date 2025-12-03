@@ -262,7 +262,7 @@
         <div class="training__container container">
           <div class="training__text-wrapper">
             <h2 class="training__title" data-duplicate-text="Обучение" aria-hidden="true">Обучение</h2>
-            <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+            <p>Обучение проводится квалифицированными специалистами, за&nbsp;плечами&nbsp;которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
           </div>
           <div class="training__slider-wrapper">
             <div class="training__navigation-wrapper">
@@ -416,7 +416,7 @@
         <div class="about__content-wrapper">
           <h2>О нас</h2>
           <h3>История компании</h3>
-          <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам&nbsp;это&nbsp;настолько понравилось, что&nbsp;мы&nbsp;этим стали жить. Спустя 5 лет, в&nbsp;2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
+          <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам&nbsp;это&nbsp;настолько понравилось, что&nbsp;мы&nbsp;этим стали жить. Спустя 5 лет, в&nbsp;2005&nbsp;году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
           <h3>Наша цель</h3>
           <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
         </div>
@@ -666,32 +666,34 @@
         </div>
       </div>
     </section>
+  </main>
+  <footer class="footer" data-test="footer">
     <section class="contacts">
       <div class="contacts__container container">
         <div class="contacts__details-container">
           <div class="contacts__text-wrapper">
             <h2 class="contacts__title" data-duplicate-text="Контакты" aria-hidden="true">Контакты</h2>
-            <p>Свяжитесь с нами любым удобным для вас способом или&nbsp;приходите&nbsp;к&nbsp;нам в гости. Мы будем рады поделиться увлекательными&nbsp;историями и подобрать для вас тур.</p>
+            <p>Свяжитесь с нами любым удобным для&nbsp;вас способом или приходите к&nbsp;нам&nbsp;в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
           </div>
           <ul class="contacts__details-list">
             <li class="contacts__details-item">
               <h3 class="contacts__details-title">Телефон</h3>
               <a class="contacts__details-info" href="tel:+7983745-45-45">+7 983 745-45-45</a>
-              <svg class="contacts__icon" width="20" height="20">
+              <svg class="contacts__icon contacts__icon--phone" width="20" height="20">
                 <use href="/__spritemap#sprite-phone-icon"></use>
               </svg>
             </li>
             <li class="contacts__details-item">
               <h3 class="contacts__details-title">Email</h3>
               <a class="contacts__details-info" href="mailto:info@lifetour.com">info@lifetour.com</a>
-              <svg class="contacts__icon" width="20" height="14">
+              <svg class="contacts__icon contacts__icon--email" width="20" height="14">
                 <use href="/__spritemap#sprite-mail-icon"></use>
               </svg>
             </li>
             <li class="contacts__details-item">
               <h3 class="contacts__details-title">Адрес</h3>
               <p class="contacts__details-info">г.Москва, пр-т Мира, д.&nbsp;14&nbsp;,&nbsp;офис&nbsp;101</p>
-              <svg class="contacts__icon" width="15" height="20">
+              <svg class="contacts__icon contacts__icon--pin" width="15" height="20">
                 <use href="/__spritemap#sprite-pin-icon"></use>
               </svg>
             </li>
@@ -699,19 +701,20 @@
         </div>
         <div class="contacts__map-wrapper">
           <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map.webp" width="600" height="324">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/map.webp" width="768" height="340">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/map.webp" width="320" height="343">
-            <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/map.jpg" width="600" height="324">
-            <source type="image/jpeg" media="(min-width: 768px)" srcset="img/map.jpg" width="768" height="340">
-            <img class="contacts__map" src="img/map.jpg" width="320" height="343" alt="Карта турагентства по адресу: г. Москва, пр-т Мира, д. 14, офис 101">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" width="600" height="324">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="340">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x" width="320" height="343">
+            <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" width="600" height="324">
+            <source type="image/jpeg" media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" width="768" height="340">
+            <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="343" alt="Карта турагентства по адресу: г. Москва, пр-т Мира, д. 14, офис 101">
           </picture>
         </div>
       </div>
     </section>
-  </main>
-  <footer class="footer" data-test="footer">
     <div class="footer__container container">
+      <div class="footer__decorative-line">
+        <span class="visually-hidden">Декоративная линия, разделяющая карту и навигацию</span>
+      </div>
       <div class="footer__wrapper">
         <a class="footer__logo" href="index.html">
           <img class="footer__logo-image" src="img/footer-logo.svg" width="142" height="42" alt="Логотип компании">

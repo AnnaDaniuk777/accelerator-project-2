@@ -31,7 +31,6 @@
 
   @media (min-width: $desktop-width) {
     text-align: left;
-    padding-left: 120px;
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -43,7 +42,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 35px;
-    padding-top: 137px;
+    padding-top: 342px;
     padding-right: 45px;
     padding-left: 45px;
   }
@@ -51,9 +50,10 @@
   @media (min-width: $desktop-width) {
     padding-top: 200px;
     padding-left: 0;
-    padding-right: 420px;
+    padding-right: 350px;
     max-width: max-content;
     align-self: flex-start;
+    margin-bottom: 37px;
   }
 }
 
@@ -73,7 +73,7 @@
   @media (min-width: $desktop-width) {
     font-size: 77px;
     line-height: 77px;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 }
 
@@ -87,7 +87,7 @@
   @media (min-width: $tablet-width) {
     font-size: 17px;
     line-height: 24px;
-    padding: 0 77px;
+    padding: 0 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -180,8 +180,7 @@
   @media (min-width: $desktop-width) {
     width: max-content;
     bottom: 92px;
-    right: 120px;
-    left: unset;
+    left: calc(50% + 500px);
   }
 }
 
@@ -192,7 +191,35 @@
   border: 1px solid $white;
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+
+  &::after {
+    @include pseudo;
+
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgb(255 255 255 / 0.5);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  &:hover {
+    background-color: #d9d9d9;
+  }
+
+  &:active {
+    background-color: rgb(255 255 255 / 0.5);
+  }
+
+  &:focus {
+    &::after {
+      display: block;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 20px;

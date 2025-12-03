@@ -90,6 +90,15 @@
 
 .gallery__slider-img {
   display: block;
+  height: 266px;
+
+  @media (min-width: $tablet-width) {
+    height: 418px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 463px;
+  }
 }
 
 .gallery__slider-buttons {

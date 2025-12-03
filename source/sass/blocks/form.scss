@@ -28,7 +28,7 @@
 }
 
 .form .form__container {
-  padding: 174px 31px;
+  padding: 177px 31px 174px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -47,7 +47,7 @@
 .form__text {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 17px;
   align-items: center;
   justify-content: center;
 
@@ -120,7 +120,7 @@
   background: $white;
   color: $black;
   border-radius: 1px;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 
   @media (min-width: $tablet-width) {
     width: 360px;
@@ -168,15 +168,6 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
-  }
-}
-
-.form .form__button {
-  &:hover {
-    background-color: $white;
-    border: none;
-    border-color: #1c3374;
-    color: #1c3374;
   }
 }
 

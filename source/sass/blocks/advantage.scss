@@ -139,8 +139,9 @@
   padding: 19px 9px;
   width: 290px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
     width: 324px;
+    min-height: 324px;
     padding: 29px 19px;
   }
 

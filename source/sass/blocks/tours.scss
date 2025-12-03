@@ -18,6 +18,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 100px;
     padding-bottom: 100px;
+    gap: 52px;
   }
 }
 
@@ -42,14 +43,14 @@
     font-size: 25px;
     line-height: 25px;
     padding-top: 20px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 35px;
     line-height: 35px;
     padding-bottom: 0;
-    padding-top: 27px;
+    padding-top: 21px;
   }
 
   &::after {
@@ -312,8 +313,8 @@
 }
 
 .tours__catalog-link {
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 14px;
   font-weight: 700;
   color: $black;
   text-decoration: none;
@@ -322,6 +323,29 @@
   align-self: center;
   padding: 10px 28px 10px 10px;
   position: relative;
+  transition: color 0.3s ease;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &:hover {
+    color: rgb(2 102 193 / 0.1);
+  }
+
+  &:focus {
+    outline: none;
+    color: $blue;
+  }
+
+  &:active {
+    color: #1c3374;
+  }
+
+  &:disabled {
+    color: #999999;
+  }
 
   &::after {
     @include pseudo;
@@ -334,6 +358,24 @@
     border-top: 2px solid $black;
     transform: translateY(-50%) rotate(45deg);
     opacity: 1;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: rgb(2 102 193 / 0.1);
+    }
+
+    &:focus {
+      outline: none;
+      color: $blue;
+    }
+
+    &:active {
+      color: #1c3374;
+    }
+
+    &:disabled {
+      color: #999999;
+    }
   }
 }
 
