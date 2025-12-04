@@ -5,6 +5,10 @@
     padding-top: 45px;
     padding-bottom: 35px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 170px;
+  }
 }
 
 .review__text-wrapper {
@@ -18,7 +22,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 37px;
+    margin-bottom: 23px;
   }
 }
 
@@ -39,6 +43,8 @@
   @media (min-width: $desktop-width) {
     font-size: 35px;
     line-height: 35px;
+    padding: 0;
+    padding-top: 55px;
   }
 
   &::after {
@@ -62,7 +68,8 @@
     @media (min-width: $desktop-width) {
       font-size: 55px;
       line-height: 55px;
-      bottom: 50%;
+      bottom: unset;
+      top: 16px;
     }
   }
 }
@@ -126,7 +133,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 19px 20px;
+    padding: 18px 20px;
     min-width: 700px;
   }
 }
@@ -199,6 +206,10 @@
     line-height: 13px;
     margin-bottom: 1px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 3px;
+  }
 }
 
 .review__user-details {
@@ -213,6 +224,10 @@
   @media (min-width: $tablet-width) {
     display: flex;
     gap: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-end;
   }
 }
 

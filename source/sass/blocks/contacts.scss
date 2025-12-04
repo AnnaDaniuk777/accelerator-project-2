@@ -13,7 +13,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 119px;
+    padding-top: 67px;
     padding-bottom: 94px;
     padding-left: 120px;
     padding-right: 120px;
@@ -34,7 +34,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 500px;
-    gap: 50px;
+    gap: 49px;
   }
 }
 
@@ -60,6 +60,19 @@
   font-weight: 800;
   margin-bottom: 29px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+    line-height: 100%;
+    margin-bottom: 23px;
+    padding-top: 55px;
+  }
+
   &::after {
     content: attr(data-duplicate-text);
     position: absolute;
@@ -71,18 +84,18 @@
     font-size: 26px;
     line-height: 26px;
     font-weight: inherit;
-  }
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
-    font-size: 25px;
-    line-height: 25px;
-  }
+    @media (min-width: $tablet-width) {
+      font-size: 40px;
+      line-height: 40px;
+      bottom: 0;
+    }
 
-  @media (min-width: $desktop-width) {
-    font-size: 35px;
-    line-height: 100%;
-    margin-bottom: 26px;
+    @media (min-width: $desktop-width) {
+      font-size: 55px;
+      line-height: 55px;
+      bottom: 0;
+    }
   }
 }
 
@@ -95,6 +108,10 @@
     font-size: 16px;
     line-height: 24px;
     padding-right: 195px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 17px;
   }
 }
 
@@ -119,6 +136,7 @@
   @media (min-width: $desktop-width) {
     padding: 0;
     flex-direction: column;
+    gap: 35px;
   }
 }
 
@@ -128,6 +146,10 @@
 
   @media (min-width: $tablet-width) {
     min-width: 153px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 56px;
   }
 }
 
@@ -190,6 +212,11 @@
   width: 100%;
   object-fit: cover;
   object-position: top center;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    top: 16px;
+  }
 }
 
 .contacts__icon {
@@ -205,6 +232,13 @@
       width: 22px;
       height: 22px;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &--email {
@@ -216,6 +250,14 @@
       top: 4px;
       left: -2px;
     }
+
+    @media (min-width: $desktop-width) {
+      width: 24px;
+      height: 17px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &--pin {
@@ -226,6 +268,14 @@
       width: 16px;
       height: 22px;
       left: -1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 18px;
+      height: 24px;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

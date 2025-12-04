@@ -54,6 +54,7 @@
   @media (min-width: $desktop-width) {
     padding-left: 120px;
     padding-right: 120px;
+    padding-top: 44px;
   }
 }
 
@@ -75,6 +76,8 @@
   @media (min-width: $desktop-width) {
     padding-left: 120px;
     padding-right: 120px;
+    padding-top: 29px;
+    gap: 22px;
   }
 }
 
@@ -85,6 +88,12 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    position: relative;
+    left: 29px;
   }
 
   &:hover {

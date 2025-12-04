@@ -34,12 +34,12 @@
 
       @media (min-width: $desktop-width) {
         background-position: right 0 bottom 0;
-        bottom: 0;
+        bottom: -15px;
         left: unset;
         right: 0;
       }
 
-      @media (resolution >= 2dppx) {
+      @media (resolution >=2dppx) {
         @media (min-width: $tablet-width) {
           background-image: url("../../img/training-cloud-background@2x.png");
         }
@@ -48,7 +48,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    gap: 56px;
+    gap: 0;
     padding-top: 47px;
   }
 }
@@ -64,6 +64,7 @@
 
   @media (min-width: $desktop-width) {
     gap: 30px;
+    margin-bottom: 60px;
   }
 
   p {
@@ -152,6 +153,7 @@
 .training__tutors-wrapper {
   overflow: hidden;
   width: 100%;
+  margin-bottom: 58px;
 }
 
 .training__slider-wrapper {
@@ -189,6 +191,7 @@
 
   @media (min-width: $desktop-width) {
     min-height: 356px;
+    padding-top: 13px;
   }
 }
 
@@ -230,6 +233,7 @@
   height: 24px;
   display: block;
   position: relative;
+  flex-shrink: 0;
 }
 
 .training__icon {
@@ -242,6 +246,11 @@
 .training__slider-button {
   display: flex;
   gap: 4px;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    top: -3px;
+  }
 }
 
 .training__button {
@@ -356,7 +365,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    gap: 23px;
+    gap: 29px;
   }
 }
 
@@ -395,7 +404,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    gap: 10px;
+    gap: 0;
     flex-direction: row;
     padding-bottom: 14px;
   }
@@ -418,9 +427,9 @@
       display: block;
       width: 1186px;
       height: 2px;
-      bottom: 0;
+      bottom: 3px;
       top: unset;
-      left: 14px;
+      left: 20px;
     }
   }
 }
@@ -499,9 +508,9 @@
 
     @media (min-width: $desktop-width) {
       display: block;
-      left: 7px;
+      left: 20px;
       top: unset;
-      bottom: -26px;
+      bottom: -23px;
     }
   }
 
@@ -520,6 +529,11 @@
     @media (min-width: $tablet-width) {
       top: 0;
       left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 2px;
+      left: 10px;
     }
   }
 }
