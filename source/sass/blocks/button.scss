@@ -1,11 +1,11 @@
 .button {
-  border: none;
   background-color: transparent;
   padding: 0;
   text-align: center;
   cursor: pointer;
   display: block;
   transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+  border: 1px solid transparent;
 
   &:focus {
     border: none;
@@ -16,7 +16,7 @@
 
   &:hover {
     background-color: $white;
-    border: 1px solid #1c3374;
+    border-color: #1c3374;
     color: #1c3374;
   }
 

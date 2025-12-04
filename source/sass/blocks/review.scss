@@ -14,7 +14,7 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: -5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -120,8 +120,9 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     gap: 30px;
-    padding: 24px 19px;
+    padding: 20px 19px;
     min-width: 565px;
+    padding-top: 18px;
   }
 
   @media (min-width: $desktop-width) {
@@ -148,7 +149,7 @@
 
 .review__content-wrapper {
   @media (min-width: $tablet-width) {
-    padding-top: 2px;
+    padding-top: 3px;
   }
 
   @media (min-width: $desktop-width) {

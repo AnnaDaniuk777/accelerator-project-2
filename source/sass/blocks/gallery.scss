@@ -1,5 +1,5 @@
 .gallery__container {
-  padding-top: 36px;
+  padding-top: 67px;
   padding-bottom: 31px;
   position: relative;
 
@@ -11,13 +11,17 @@
     @media (min-width: $tablet-width) {
       font-size: 14px;
       line-height: 22px;
-      padding-right: 300px;
+      padding-right: 290px;
     }
 
     @media (min-width: $desktop-width) {
       font-size: 16px;
       line-height: 24px;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 21px;
   }
 
   @media (min-width: $desktop-width) {

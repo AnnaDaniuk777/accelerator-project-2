@@ -201,7 +201,11 @@
     width: 21px;
     height: 21px;
     opacity: 0;
-    top: 40%;
+    top: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 0;
+    }
   }
 }
 
@@ -298,7 +302,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 40px 45px 42px;
+    padding: 29px 45px 67px;
     background-color: $blue;
     width: 100%;
   }

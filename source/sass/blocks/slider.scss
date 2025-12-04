@@ -1,14 +1,14 @@
 .slider__swiper {
-  height: 568px;
+  min-height: 568px;
   position: relative;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    height: 1034px;
+    min-height: 1034px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 800px;
+    min-height: 800px;
   }
 }
 
@@ -28,11 +28,17 @@
   z-index: 2;
   height: 100%;
   text-align: center;
+  min-height: 568px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 1034px;
+  }
 
   @media (min-width: $desktop-width) {
     text-align: left;
     max-width: 1440px;
     margin: 0 auto;
+    min-height: 800px;
   }
 }
 
@@ -40,11 +46,29 @@
   margin-bottom: 60px;
   padding-top: 144px;
 
+  &--two {
+    padding-top: 134px;
+  }
+
+  &--three {
+    padding-top: 120px;
+    margin-bottom: 62px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 35px;
     padding-top: 342px;
     padding-right: 45px;
     padding-left: 45px;
+
+    &--two {
+      padding-top: 137px;
+    }
+
+    &--three {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -54,6 +78,10 @@
     max-width: max-content;
     align-self: flex-start;
     margin-bottom: 37px;
+
+    &--three {
+      padding-right: 260px;
+    }
   }
 }
 
@@ -93,6 +121,23 @@
   @media (min-width: $desktop-width) {
     padding: 0;
     padding-right: 428px;
+  }
+}
+
+.slider__content-wrapper--three p {
+  @media (min-width: $tablet-width) {
+    padding: 0 115px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-right: 428px;
+  }
+}
+
+.slider__content-wrapper--two p {
+  @media (min-width: $desktop-width) {
+    padding-right: 380px;
   }
 }
 
@@ -250,9 +295,8 @@
   @media (min-width: $desktop-width) {
     width: 410px;
     height: 459px;
-    right: 120px;
     bottom: unset;
-    left: unset;
+    left: calc(50% + 190px);
     top: 52%;
     transform: translateY(-50%);
   }

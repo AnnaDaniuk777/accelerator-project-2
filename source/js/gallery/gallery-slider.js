@@ -10,7 +10,7 @@ export const initGallerySwiper = () => {
     breakpoints: {
       320: {
         slidesPerView: 'auto',
-        spaceBetween: 3,
+        spaceBetween: 5,
         loop: true
       },
       768: {

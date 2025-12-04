@@ -52,6 +52,7 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 190px;
+    max-width: 1250px;
   }
 
   h2 {
@@ -112,7 +113,11 @@
   }
 
   p:not(:last-child) {
-    margin-bottom: 29px;
+    margin-bottom: 27px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 29px;
+    }
   }
 }
 

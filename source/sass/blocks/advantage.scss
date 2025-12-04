@@ -7,7 +7,7 @@
   padding: 30px 15px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 45px 40px;
+    padding: 49px 45px 40px;
     gap: 60px;
   }
 
@@ -74,7 +74,6 @@
   @media (max-width: $tablet-width-only) {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
     flex-direction: row;
     gap: 30px;

@@ -30,6 +30,7 @@
 
 .footer__wrapper,
 .footer__social-wrapper {
+  max-width: 1440px;
   padding-top: 24px;
   padding-left: 15px;
   padding-right: 15px;
@@ -43,10 +44,11 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 34px;
+    padding-top: 35px;
     padding-right: 45px;
     padding-left: 45px;
     width: 100%;
+    gap: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -67,6 +69,7 @@
     padding-left: 45px;
     width: 100%;
     align-items: center;
+    gap: 34px;
   }
 
   @media (min-width: $desktop-width) {
@@ -79,6 +82,10 @@
   display: block;
   align-self: center;
   transition: opacity 0.3s ease;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 15px;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -109,7 +116,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 26px;
   }
 
   @media (min-width: $desktop-width) {
