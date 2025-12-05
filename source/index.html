@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lifetour — незабываемые горные приключения! Восхождения на Эльбрус, треккинг по Алтаю, походы на Камчатку. Профессиональные гиды, безопасные маршруты, потрясающие пейзажи. Организуем туры любой сложности для новичков и опытных альпинистов.">
   <title>Lifetour</title>
   <link rel="preload" href="fonts/Montserrat-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -11,6 +12,15 @@
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Light.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon.png">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
@@ -121,15 +131,15 @@
               </div>
             </div>
             <div class="slider__pagination">
-              <span class="slider__pagination-bullet slider__pagination-bullet--active">
+              <button class="slider__pagination-bullet slider__pagination-bullet--active" type="button">
                 <span class="visually-hidden">Кнопка-буллет первого слайда</span>
-              </span>
-              <span class="slider__pagination-bullet">
+              </button>
+              <button class="slider__pagination-bullet" type="button">
                 <span class="visually-hidden">Кнопка-буллет второго слайда</span>
-              </span>
-              <span class="slider__pagination-bullet">
+              </button>
+              <button class="slider__pagination-bullet" type="button">
                 <span class="visually-hidden">Кнопка-буллет третьего слайда</span>
-              </span>
+              </button>
             </div>
           </div>
         </div>
@@ -397,7 +407,7 @@
                 Подготовка и техническое снаряжение в походах
               </li>
               <li class="training__process-item training__process-item--tree">
-                Лекции по&nbsp;окружающей&nbsp;среде, экологии и гигиене
+                Лекции по&nbsp;окружающей среде, экологии и гигиене
               </li>
               <li class="training__process-item training__process-item--mountain">
                 Разъяснение сложности горных препятствий
@@ -420,7 +430,7 @@
           </picture>
         </div>
         <div class="about__content-wrapper">
-          <h2>О нас</h2>
+          <h2 data-duplicate-text="О нас" aria-hidden="true">О нас</h2>
           <h3>История компании</h3>
           <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам&nbsp;это&nbsp;настолько понравилось, что&nbsp;мы&nbsp;этим стали жить. Спустя 5 лет, в&nbsp;2005&nbsp;году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
           <h3>Наша цель</h3>
@@ -546,11 +556,11 @@
             </li>
             <li class="advantage__item advantage__item--crown-icon swiper-slide">
               <h3>Экспертиза и знания</h3>
-              <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. Это гарантирует, что&nbsp;наши клиенты находятся в&nbsp;надежных руках и могут в&nbsp;полной мере насладиться опытом без&nbsp;опасений.</p>
+              <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. <br>Это гарантирует, что&nbsp;наши клиенты находятся в&nbsp;надежных руках и могут в&nbsp;полной мере насладиться опытом без&nbsp;опасений.</p>
             </li>
             <li class="advantage__item advantage__item--boot-icon swiper-slide">
               <h3>Оборудование и снаряжение</h3>
-              <p>Мы предоставляем клиентам все&nbsp;необходимое оборудование, необходимое для путешествия. Это избавляет клиентов от&nbsp;необходимости покупать, брать с&nbsp;собой снаряжение, что&nbsp;делает путешествие более удобным и&nbsp;экономически выгодным.</p>
+              <p>Мы предоставляем клиентам все&nbsp;необходимое оборудование, необходимое для путешествия. Это&nbsp;избавляет клиентов от&nbsp;необходимости покупать, брать с&nbsp;собой снаряжение, что&nbsp;делает путешествие более удобным и&nbsp;экономически выгодным.</p>
             </li>
             <li class="advantage__item advantage__item--path-icon swiper-slide">
               <h3>Индивидуальные маршруты</h3>
@@ -683,21 +693,21 @@
           <ul class="contacts__details-list">
             <li class="contacts__details-item">
               <h3 class="contacts__details-title">Телефон</h3>
-              <a class="contacts__details-info" href="tel:+7983745-45-45">+7 983 745-45-45</a>
+              <a class="contacts__details-info contacts__details-info--link" href="tel:+79837454545">+7 983 745-45-45</a>
               <svg class="contacts__icon contacts__icon--phone" width="20" height="20" role="img" aria-label="Иконка телефона">
                 <use href="/__spritemap#sprite-phone-icon"></use>
               </svg>
             </li>
             <li class="contacts__details-item">
               <h3 class="contacts__details-title">Email</h3>
-              <a class="contacts__details-info" href="mailto:info@lifetour.com">info@lifetour.com</a>
+              <a class="contacts__details-info contacts__details-info--link" href="mailto:info@lifetour.com">info@lifetour.com</a>
               <svg class="contacts__icon contacts__icon--email" width="20" height="14" role="img" aria-label="Иконка почты">
                 <use href="/__spritemap#sprite-mail-icon"></use>
               </svg>
             </li>
             <li class="contacts__details-item">
               <h3 class="contacts__details-title">Адрес</h3>
-              <p class="contacts__details-info">г.Москва, пр-т Мира, д.&nbsp;14&nbsp;,&nbsp;офис&nbsp;101</p>
+              <p class="contacts__details-info">г. Москва, пр-т Мира, д.&nbsp;14,&nbsp;офис&nbsp;101</p>
               <svg class="contacts__icon contacts__icon--pin" width="15" height="20" role="img" aria-label="Иконка геолокации">
                 <use href="/__spritemap#sprite-pin-icon"></use>
               </svg>
@@ -744,7 +754,7 @@
             <a class="footer__nav-link" href="#contacts">Контакты</a>
           </li>
         </ul>
-        <a class="footer__phone" href="tel:8800725-32-32">8 800 725-32-32</a>
+        <a class="footer__phone" href="tel:88007253232">8 800 725-32-32</a>
       </div>
       <div class="footer__social-wrapper">
         <ul class="footer__social-list">

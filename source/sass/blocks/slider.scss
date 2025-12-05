@@ -29,9 +29,11 @@
   height: 100%;
   text-align: center;
   min-height: 568px;
+  padding-bottom: 60px;
 
   @media (min-width: $tablet-width) {
     min-height: 1034px;
+    padding-bottom: 70px;
   }
 
   @media (min-width: $desktop-width) {

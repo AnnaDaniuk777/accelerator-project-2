@@ -69,7 +69,7 @@
     @media (min-width: $tablet-width) {
       font-size: 40px;
       line-height: 40px;
-      bottom: 0;
+      bottom: 10px;
     }
 
     @media (min-width: $desktop-width) {
@@ -113,7 +113,7 @@
 .tours__item--caucas {
   background-image: url("../../img/tours-one@1x.jpg");
 
-  @media (resolution >=2dppx) {
+  @media (resolution >= 2dppx) {
     background-image: url("../../img/tours-one@2x.jpg");
   }
 }
@@ -121,7 +121,7 @@
 .tours__item--altai {
   background-image: url("../../img/tours-two@1x.jpg");
 
-  @media (resolution >=2dppx) {
+  @media (resolution >= 2dppx) {
     background-image: url("../../img/tours-two@2x.jpg");
   }
 }
@@ -129,7 +129,7 @@
 .tours__item--adygea {
   background-image: url("../../img/tours-three@1x.jpg");
 
-  @media (resolution >=2dppx) {
+  @media (resolution >= 2dppx) {
     background-image: url("../../img/tours-three@2x.jpg");
   }
 }
@@ -234,15 +234,13 @@
 .tours__details-table {
   color: $white;
   text-align: left;
-  display: grid;
-  grid-template-columns: 70px 83px 67px;
-  gap: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 .tours__details-table-wrapper--center {
-  .tours__description {
-    padding-left: 3px;
-  }
+  padding-left: 3px;
 }
 
 .tours__description {
@@ -259,7 +257,10 @@
 }
 
 .tours__value-star {
-  min-width: 84px;
+  width: 84px;
+  display: block;
+  height: 16px;
+  margin-top: 2px;
 }
 
 .tours__item--caucas .tours__value--four-stars::before,
@@ -272,8 +273,8 @@
   background-repeat: repeat-x;
   width: 67px;
   height: 14px;
-  top: 20px;
-  left: -69px;
+  top: 0;
+  left: 0;
 }
 
 .tours__item--caucas .tours__value--four-stars::after,
@@ -286,8 +287,8 @@
   background-repeat: no-repeat;
   width: 17px;
   height: 14px;
-  top: 20px;
-  left: -1px;
+  top: 0;
+  right: 0;
 }
 
 .tours__item--altai .tours__value--three-stars::before {
@@ -349,19 +350,35 @@
 
   &:hover {
     color: rgb(2 102 193 / 0.1);
+
+    &::after {
+      border-color: rgb(2 102 193 / 0.1);
+    }
   }
 
   &:focus {
     outline: none;
     color: $blue;
+
+    &::after {
+      border-color: $blue;
+    }
   }
 
   &:active {
     color: #1c3374;
+
+    &::after {
+      border-color: #1c3374;
+    }
   }
 
   &:disabled {
     color: #999999;
+
+    &::after {
+      border-color: #999999;
+    }
   }
 
   &::after {
@@ -375,24 +392,7 @@
     border-top: 2px solid $black;
     transform: translateY(-50%) rotate(45deg);
     opacity: 1;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: rgb(2 102 193 / 0.1);
-    }
-
-    &:focus {
-      outline: none;
-      color: $blue;
-    }
-
-    &:active {
-      color: #1c3374;
-    }
-
-    &:disabled {
-      color: #999999;
-    }
+    transition: border-color 0.3s ease;
   }
 }
 

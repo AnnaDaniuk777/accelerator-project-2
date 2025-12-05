@@ -1,7 +1,11 @@
 .gallery__container {
-  padding-top: 67px;
+  padding-top: 36px;
   padding-bottom: 31px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 67px;
+  }
 
   p {
     margin: 0;

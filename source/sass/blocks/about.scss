@@ -63,6 +63,7 @@
     font-weight: 800;
     margin: 0;
     margin-bottom: 42px;
+    position: relative;
 
     @media (min-width: $tablet-width) {
       font-size: 25px;
@@ -119,7 +120,34 @@
 
     @media (min-width: $tablet-width) {
       margin-bottom: 29px;
-      padding-right: 20px;
+      padding-right: 0;
+    }
+  }
+}
+
+.about__content-wrapper h2 {
+  &::after {
+    content: attr(data-duplicate-text);
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: -1;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: inherit;
+
+    @media (min-width: $tablet-width) {
+      font-size: 40px;
+      line-height: 40px;
+      bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 55px;
+      line-height: 55px;
+      bottom: 0;
     }
   }
 }
