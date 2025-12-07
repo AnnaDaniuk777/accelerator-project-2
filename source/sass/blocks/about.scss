@@ -1,3 +1,9 @@
+.about {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
 .about__container {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -11,6 +17,8 @@
   @media (min-width: $desktop-width) {
     padding-top: 100px;
     padding-bottom: 100px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -52,8 +60,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 190px;
-    max-width: 1250px;
+    padding-right: 198px;
     padding-top: 10px;
   }
 
@@ -129,7 +136,7 @@
   &::after {
     content: attr(data-duplicate-text);
     position: absolute;
-    bottom: 25%;
+    bottom: 10px;
     left: 0;
     opacity: 0.03;
     pointer-events: none;
@@ -147,7 +154,7 @@
     @media (min-width: $desktop-width) {
       font-size: 55px;
       line-height: 55px;
-      bottom: 0;
+      bottom: 19px;
     }
   }
 }
@@ -161,5 +168,6 @@
 
   @media (min-width: $desktop-width) {
     min-width: 660px;
+    position: static;
   }
 }

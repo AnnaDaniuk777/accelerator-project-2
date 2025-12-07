@@ -41,17 +41,17 @@
   @include reset;
 
   display: flex;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
-    gap: 22px;
+    gap: 18px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 31px;
+    gap: 19px;
     flex-direction: row;
   }
 }
@@ -107,11 +107,19 @@
 }
 
 .header__nav-link {
+  display: inline-block;
+  padding: 3px 5px;
   position: relative;
-  transition: color 0.3s ease, border 0.3s ease;
+  border: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    border-bottom-color: $white;
+  }
 
   &:focus {
     outline: none;
+    border-color: $white;
   }
 
   &:active {
@@ -280,18 +288,18 @@
   @media (max-width: $mobile-width-only) {
     width: 100%;
     background-color: $blue;
-    padding: 12px 15px 46px;
+    padding: 12px 15px 46px 9px;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 29px 45px 67px;
+    padding: 27px 45px 65px 39px;
     background-color: $blue;
     width: 100%;
   }
 
   @media (min-width: $desktop-width) {
     position: static;
-    padding: 35px 45px;
+    padding: 33px 44px;
     justify-self: center;
     display: block;
   }

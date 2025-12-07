@@ -1,0 +1,44 @@
+.clouds {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      @include pseudo;
+
+      background-image: url("../../img/cloud-one-background@1x.png");
+      background-repeat: no-repeat;
+      background-position: right 0 top 0;
+      background-size: 1200px 401px;
+      width: 1200px;
+      height: 401px;
+      top: 392px;
+      left: -136px;
+      z-index: 1;
+
+      @media (resolution >= 2dppx) {
+        background-image: url("../../img/cloud-one-background@1x.png");
+      }
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      @include pseudo;
+
+      background-image: url("../../img/cloud-two-background@1x.png");
+      background-repeat: no-repeat;
+      background-position: right 0 top 0;
+      background-size: 788px 263px;
+      width: 788px;
+      height: 263px;
+      top: 586px;
+      right: -240px;
+      z-index: 1;
+
+      @media (min-resolution >= 2dppx) {
+        background-image: url("../../img/cloud-two-background@2x.png");
+      }
+    }
+  }
+}

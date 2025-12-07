@@ -102,6 +102,7 @@
 .review .review__comments-item {
   flex-shrink: 0;
   width: 290px;
+  background-color: $white;
 
   @media (min-width: $tablet-width) {
     width: 565px;

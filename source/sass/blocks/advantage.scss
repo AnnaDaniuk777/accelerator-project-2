@@ -34,6 +34,10 @@
       top: 244px;
       right: -171px;
       z-index: 1;
+
+      @media (min-resolution >= 2dppx) {
+        background-image: url("../../img/cloud-one-background@2x.png");
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -54,13 +58,14 @@
       bottom: 226px;
       right: -140px;
       z-index: 1;
+
+      @media (min-resolution >= 2dppx) {
+        background-image: url("../../img/cloud-two-background@2x.png");
+      }
     }
 
     @media (min-width: $desktop-width) {
-      background-image: url("../../img/cloud-two-background@2x.png");
-      background-position: right 0 top 0;
-      top: -57px;
-      right: -255px;
+      background-image: none;
     }
   }
 }
@@ -80,7 +85,7 @@
   @media (min-width: $desktop-width) {
     font-size: 35px;
     line-height: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
     padding: 0 20px;
     text-align: center;
   }
@@ -90,7 +95,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0;
+    bottom: 10px;
     opacity: 0.03;
     pointer-events: none;
     z-index: -1;

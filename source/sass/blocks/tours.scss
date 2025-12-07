@@ -75,7 +75,7 @@
     @media (min-width: $desktop-width) {
       font-size: 55px;
       line-height: 55px;
-      bottom: 0;
+      bottom: -4px;
     }
   }
 }
@@ -92,14 +92,14 @@
   display: flex;
   flex-direction: column;
   width: 290px;
-  height: 416px;
+  min-height: 416px;
   flex-shrink: 0;
-  padding: 30px 20px;
+  padding: 30px 20px 27px;
   background-color: #758360;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 224px;
+  justify-content: flex-end;
 
   @media (min-width: $tablet-width) {
     width: 330px;
@@ -110,42 +110,18 @@
   }
 }
 
-.tours__item--caucas {
-  background-image: url("../../img/tours-one@1x.jpg");
-
-  @media (resolution >= 2dppx) {
-    background-image: url("../../img/tours-one@2x.jpg");
-  }
-}
-
-.tours__item--altai {
-  background-image: url("../../img/tours-two@1x.jpg");
-
-  @media (resolution >= 2dppx) {
-    background-image: url("../../img/tours-two@2x.jpg");
-  }
-}
-
-.tours__item--adygea {
-  background-image: url("../../img/tours-three@1x.jpg");
-
-  @media (resolution >= 2dppx) {
-    background-image: url("../../img/tours-three@2x.jpg");
-  }
-}
-
-.tours__item--ural {
-  background-image: url("../../img/tours-four@1x.jpg");
-
-  @media (resolution >= 2dppx) {
-    background-image: url("../../img/tours-four@2x.jpg");
-  }
+.tours__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .tours__details-wrapper {
   display: flex;
-  justify-content: space-between;
-  gap: 6px;
   margin-bottom: 15px;
 }
 
@@ -154,7 +130,11 @@
   font-size: 12px;
   line-height: 12px;
   font-weight: 500;
-  padding: 8px 6px 8px 32px;
+  padding: 8px 0 8px 32px;
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 2px 9px 30px;
+  }
 }
 
 .tours__details--place {
@@ -180,6 +160,7 @@
 
 .tours__details--day {
   position: relative;
+  margin-left: auto;
 
   &::after {
     @include pseudo;
@@ -198,6 +179,7 @@
 
 .tours__details--night {
   position: relative;
+  margin-left: 14px;
 
   &::after {
     @include pseudo;
@@ -221,7 +203,7 @@
   font-weight: 700;
   margin: 0;
   padding-top: 1px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .tours__decorative {
@@ -241,6 +223,24 @@
 
 .tours__details-table-wrapper--center {
   padding-left: 3px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 48px;
+  }
+}
+
+.tours__details-table-wrapper--right {
+  @media (min-width: $tablet-width) {
+    padding-left: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 38px;
+  }
 }
 
 .tours__description {
@@ -263,8 +263,7 @@
   margin-top: 2px;
 }
 
-.tours__item--caucas .tours__value--four-stars::before,
-.tours__item--adygea .tours__value--four-stars::before {
+.tours__value--four-stars::before {
   @include pseudo;
 
   background-image: url("/__spritemap#sprite-tours-star-filled-icon-view");
@@ -277,8 +276,7 @@
   left: 0;
 }
 
-.tours__item--caucas .tours__value--four-stars::after,
-.tours__item--adygea .tours__value--four-stars::after {
+.tours__value--four-stars::after {
   @include pseudo;
 
   background-image: url("/__spritemap#sprite-tours-star-unfilled-icon-view");
@@ -291,33 +289,33 @@
   right: 0;
 }
 
-.tours__item--altai .tours__value--three-stars::before {
+.tours__value--three-stars::before {
   @include pseudo;
 
   background-image: url("/__spritemap#sprite-tours-star-filled-icon-view");
-  background-size: 15px 13px;
+  background-size: 17px 14px;
   background-position: left top;
   background-repeat: repeat-x;
-  width: calc(3 * 15px);
-  height: 13px;
+  width: 48px;
+  height: 14px;
   top: 0;
   left: 0;
 }
 
-.tours__item--altai .tours__value--three-stars::after {
+.tours__value--three-stars::after {
   @include pseudo;
 
   background-image: url("/__spritemap#sprite-tours-star-unfilled-icon-view");
-  background-size: 15px 13px;
+  background-size: 17px 14px;
   background-position: right top;
   background-repeat: repeat-x;
-  width: calc(2 * 15px);
-  height: 13px;
+  width: 39px;
+  height: 14px;
   top: 0;
-  left: 45px;
+  right: 0;
 }
 
-.tours__item--ural .tours__value--five-stars::before {
+.tours__value--five-stars::before {
   @include pseudo;
 
   background-image: url("/__spritemap#sprite-tours-star-filled-icon-view");
@@ -328,6 +326,10 @@
   height: 13px;
   top: 0;
   left: 0;
+}
+
+.tours__item.tours__item--adygea {
+  padding-top: 196px;
 }
 
 .tours__catalog-link {

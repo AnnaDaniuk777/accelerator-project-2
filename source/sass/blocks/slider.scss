@@ -16,6 +16,16 @@
   position: relative;
   width: 100%;
   height: 100%;
+
+  &::before {
+    @include pseudo;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(112.1deg, rgb(15 20 41 / 0.33) 17.23%, rgb(15 20 41 / 0) 94.93%);
+  }
 }
 
 .slider__content {
@@ -87,7 +97,7 @@
   }
 }
 
-.slider__content-wrapper h1 {
+.slider__content-wrapper h2 {
   font-size: 26px;
   line-height: 26px;
   font-weight: 800;

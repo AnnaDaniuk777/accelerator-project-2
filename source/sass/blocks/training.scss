@@ -106,7 +106,7 @@
   &::after {
     content: attr(data-duplicate-text);
     position: absolute;
-    bottom: 25%;
+    bottom: 13px;
     left: 0;
     opacity: 0.03;
     pointer-events: none;
@@ -169,7 +169,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    gap: 20px;
+    gap: 19px;
     margin-bottom: 57px;
   }
 }

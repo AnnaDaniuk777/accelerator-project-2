@@ -62,6 +62,7 @@
   </header>
   <main class="main-content">
     <section class="hero" data-test="hero">
+      <h1 class="visually-hidden">Туристические хиты</h1>
       <div class="hero__container">
         <div class="hero__slider slider">
           <div class="slider__swiper swiper">
@@ -74,7 +75,7 @@
                 <div class="slider__item container">
                   <div class="slider__content">
                     <div class="slider__content-wrapper slider__content-wrapper--one">
-                      <h1>Захватывающие вершины&nbsp;Кавказа</h1>
+                      <h2>Захватывающие вершины&nbsp;Кавказа</h2>
                       <p>В сопровождении опытных гидов вы пройдёте через&nbsp;потрясающие ландшафты и совершите восход на&nbsp;вершину&nbsp;горы&nbsp;Чегет.</p>
                     </div>
                     <a class="slider__button button" href="#tours">Смотреть тур</a>
@@ -93,7 +94,7 @@
                 <div class="slider__item container">
                   <div class="slider__content">
                     <div class="slider__content-wrapper slider__content-wrapper--two">
-                      <h1>Невероятная природа&nbsp;Камчатки</h1>
+                      <h2>Невероятная природа&nbsp;Камчатки</h2>
                       <p>Незабываемое приключение, во&nbsp;время&nbsp;которого вы&nbsp;отправитесь в путешествие по одному&nbsp;из&nbsp;самых нетронутых уголков дикой природы в мире.</p>
                     </div>
                     <a class="slider__button button" href="#tours">Смотреть тур</a>
@@ -103,10 +104,10 @@
                     </div>
                   </div>
                   <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero-cards-desktop.webp" width="410" height="459">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/hero-cards-tablet.webp" width="442" height="365">
-                    <source type="image/png" media="(min-width: 1440px)" srcset="img/hero-cards-desktop.png" width="410" height="459">
-                    <img class="slider__cards" src="img/hero-cards-tablet.png" width="442" height="365" alt="Фотографии тура по Камчатке">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero-cards-desktop@1x.webp 1x, img/hero-cards-desktop@2x.webp 2x" width="410" height="459">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/hero-cards-tablet@1x.webp 1x, img/hero-cards-tablet@2x.webp 2x" width="442" height="365">
+                    <source type="image/png" media="(min-width: 1440px)" srcset="img/hero-cards-desktop@1x.png 1x, img/hero-cards-desktop@2x.png 2x" width="410" height="459">
+                    <img class="slider__cards" src="img/hero-cards-tablet@1x.png" srcset="img/hero-cards-tablet@2x.png 2x" width="442" height="365" alt="Фотографии тура по Камчатке">
                   </picture>
                 </div>
               </div>
@@ -118,7 +119,7 @@
                 <div class="slider__item container">
                   <div class="slider__content">
                     <div class="slider__content-wrapper slider__content-wrapper--three">
-                      <h1>Магические пейзажи Алтайского Края</h1>
+                      <h2>Магические пейзажи Алтайского Края</h2>
                       <p>Алтайский трекинг-тур &mdash; это&nbsp;захватывающее приключение с посещением магических и&nbsp;захватывающих дух ландшафтов Алтайских гор.</p>
                     </div>
                     <a class="slider__button button" href="#tour-offer">Смотреть тур</a>
@@ -162,12 +163,18 @@
           <div class="tours__swiper swiper">
             <ul class="tours__list swiper-wrapper">
               <li class="tours__item tours__item--caucas swiper-slide">
+                <div class="tours__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1440px)" srcset="img/tours-one@1x.webp, img/tours-one@2x.webp 2x" width="380" height="416">
+                    <img class="tours__image" src="img/tours-one@1x.jpg" srcset="img/tours-one@2x.jpg 2x" width="380" height="416" alt="Путешествие вокруг Эльбруса">
+                  </picture>
+                </div>
                 <div class="tours__details-wrapper">
                   <span class="tours__details tours__details--place">Кавказ</span>
                   <span class="tours__details tours__details--day">4 дня</span>
                   <span class="tours__details tours__details--night">3 ночи</span>
                 </div>
-                <h3 class="tours__slider-title">Путешествие вокруг Эльбруса</h3>
+                <h3 class="tours__slider-title">Путешествие <br>вокруг Эльбруса</h3>
                 <div class="tours__decorative">
                   <span class="visually-hidden">Декоративная линия-разделитель между заголовком и таблицей с данными</span>
                 </div>
@@ -182,92 +189,110 @@
                     <span class="tours__description">Даты набора:</span>
                     <span class="tours__value">12.06–19.06</span>
                   </div>
-                  <div class="tours__details-table-wrapper">
+                  <div class="tours__details-table-wrapper tours__details-table-wrapper--right">
                     <span class="tours__description">Группа:</span>
                     <span class="tours__value">до 15 чел.</span>
                   </div>
                 </div>
               </li>
               <li class="tours__item tours__item--altai swiper-slide">
+                <div class="tours__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1440px)" srcset="img/tours-two@1x.webp, img/tours-two@2x.webp 2x" width="380" height="416">
+                    <img class="tours__image" src="img/tours-two@1x.jpg" srcset="img/tours-two@2x.jpg 2x" width="380" height="416" alt="Путь к подножию Белухи">
+                  </picture>
+                </div>
                 <div class="tours__details-wrapper">
                   <span class="tours__details tours__details--place">Алтай</span>
                   <span class="tours__details tours__details--day">14 дней</span>
                   <span class="tours__details tours__details--night">13 ночей</span>
                 </div>
-                <h3 class="tours__slider-title">Путь к подножию Белухи</h3>
+                <h3 class="tours__slider-title">Путь к подножию<br>Белухи</h3>
                 <div class="tours__decorative">
                   <span class="visually-hidden">Декоративная линия-разделитель между заголовком и таблицей с данными</span>
                 </div>
-                <table class="tours__details-table">
-                  <tbody>
-                    <tr>
-                      <td class="tours__description">Сложность:</td>
-                      <td class="tours__description">Даты набора:</td>
-                      <td class="tours__description">Группа:</td>
-                    </tr>
-                    <tr>
-                      <th class="tours__value tours__value--three-stars">
-                        <span class="visually-hidden">3 звезды</span>
-                      </th>
-                      <th class="tours__value">14.06–23.06</th>
-                      <th class="tours__value">до 25 чел.</th>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="tours__details-table">
+                  <div class="tours__details-table-wrapper">
+                    <span class="tours__description">Сложность:</span>
+                    <span class="tours__value tours__value-star tours__value--three-stars">
+                      <span class="visually-hidden">3 звезды</span>
+                    </span>
+                  </div>
+                  <div class="tours__details-table-wrapper tours__details-table-wrapper--center">
+                    <span class="tours__description">Даты набора:</span>
+                    <span class="tours__value">14.06–23.06</span>
+                  </div>
+                  <div class="tours__details-table-wrapper tours__details-table-wrapper--right">
+                    <span class="tours__description">Группа:</span>
+                    <span class="tours__value">до 25 чел.</span>
+                  </div>
+                </div>
               </li>
               <li class="tours__item tours__item--adygea swiper-slide">
+                <div class="tours__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1440px)" srcset="img/tours-three@1x.webp, img/tours-three@2x.webp 2x" width="380" height="416">
+                    <img class="tours__image" src="img/tours-three@1x.jpg" srcset="img/tours-three@2x.jpg 2x" width="380" height="416" alt="Через Фишт к Чёрному морю и обратно">
+                  </picture>
+                </div>
                 <div class="tours__details-wrapper">
                   <span class="tours__details tours__details--place">Адыгея</span>
                   <span class="tours__details tours__details--day">7 дней</span>
                   <span class="tours__details tours__details--night">6 ночей</span>
                 </div>
-                <h3 class="tours__slider-title">Через Фишт к Чёрному морю и обратно</h3>
+                <h3 class="tours__slider-title">Через Фишт<br>к Чёрному морю<br>и обратно</h3>
                 <div class="tours__decorative">
                   <span class="visually-hidden">Декоративная линия-разделитель между заголовком и таблицей с данными</span>
                 </div>
-                <table class="tours__details-table">
-                  <tbody>
-                    <tr>
-                      <td class="tours__description">Сложность:</td>
-                      <td class="tours__description">Даты набора:</td>
-                      <td class="tours__description">Группа:</td>
-                    </tr>
-                    <tr>
-                      <th class="tours__value tours__value--four-stars">
-                        <span class="visually-hidden">4 звезды</span>
-                      </th>
-                      <th class="tours__value">15.07–19.07</th>
-                      <th class="tours__value">до 22 чел.</th>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="tours__details-table">
+                  <div class="tours__details-table-wrapper">
+                    <span class="tours__description">Сложность:</span>
+                    <span class="tours__value tours__value-star tours__value--four-stars">
+                      <span class="visually-hidden">4 звезды</span>
+                    </span>
+                  </div>
+                  <div class="tours__details-table-wrapper tours__details-table-wrapper--center">
+                    <span class="tours__description">Даты набора:</span>
+                    <span class="tours__value">15.07–19.07</span>
+                  </div>
+                  <div class="tours__details-table-wrapper tours__details-table-wrapper--right">
+                    <span class="tours__description">Группа:</span>
+                    <span class="tours__value">до 22 чел.</span>
+                  </div>
+                </div>
               </li>
               <li class="tours__item tours__item--ural swiper-slide">
+                <div class="tours__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 1440px)" srcset="img/tours-four@1x.webp, img/tours-four@2x.webp 2x" width="380" height="416">
+                    <img class="tours__image" src="img/tours-four@1x.jpg" srcset="img/tours-four@2x.jpg 2x" width="380" height="416" alt="Восхождение Манарага">
+                  </picture>
+                </div>
                 <div class="tours__details-wrapper">
                   <span class="tours__details tours__details--place">Урал</span>
                   <span class="tours__details tours__details--day">9 дней</span>
                   <span class="tours__details tours__details--night">10 ночей</span>
                 </div>
-                <h3 class="tours__slider-title">Восхождение Манарага</h3>
+                <h3 class="tours__slider-title">Восхождение<br>Манарага</h3>
                 <div class="tours__decorative">
                   <span class="visually-hidden">Декоративная линия-разделитель между заголовком и таблицей с данными</span>
                 </div>
-                <table class="tours__details-table">
-                  <tbody>
-                    <tr>
-                      <td class="tours__description">Сложность:</td>
-                      <td class="tours__description">Даты набора:</td>
-                      <td class="tours__description">Группа:</td>
-                    </tr>
-                    <tr>
-                      <th class="tours__value tours__value--five-stars">
-                        <span class="visually-hidden">5 звезд</span>
-                      </th>
-                      <th class="tours__value">12.07–19.07</th>
-                      <th class="tours__value">до 7 чел.</th>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="tours__details-table">
+                  <div class="tours__details-table-wrapper">
+                    <span class="tours__description">Сложность:</span>
+                    <span class="tours__value tours__value-star tours__value--five-stars">
+                      <span class="visually-hidden">5 звезд</span>
+                    </span>
+                  </div>
+                  <div class="tours__details-table-wrapper tours__details-table-wrapper--center">
+                    <span class="tours__description">Даты набора:</span>
+                    <span class="tours__value">12.07–19.07</span>
+                  </div>
+                  <div class="tours__details-table-wrapper tours__details-table-wrapper--right">
+                    <span class="tours__description">Группа:</span>
+                    <span class="tours__value">до 7 чел.</span>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -432,156 +457,158 @@
         <div class="about__content-wrapper">
           <h2 data-duplicate-text="О нас" aria-hidden="true">О нас</h2>
           <h3>История компании</h3>
-          <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам&nbsp;это&nbsp;настолько понравилось, что&nbsp;мы&nbsp;этим стали жить. Спустя 5 лет, в&nbsp;2005&nbsp;году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
+          <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам&nbsp;это&nbsp;настолько понравилось, что&nbsp;мы&nbsp;этим стали жить. Спустя&nbsp;5 лет, в&nbsp;2005&nbsp;году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
           <h3>Наша цель</h3>
           <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
         </div>
       </div>
     </section>
-    <section class="review" data-test="reviews">
-      <div class="review__container">
-        <div class="review__text-wrapper container">
-          <h2 class="review__title" data-duplicate-text="Отзывы" aria-hidden="true">Отзывы</h2>
-          <div class="review__slider-button">
-            <button class="review__button review__button--prev button" type="button">
+    <div class="clouds">
+      <section class="review" data-test="reviews">
+        <div class="review__container">
+          <div class="review__text-wrapper container">
+            <h2 class="review__title" data-duplicate-text="Отзывы" aria-hidden="true">Отзывы</h2>
+            <div class="review__slider-button">
+              <button class="review__button review__button--prev button" type="button">
+                <span class="visually-hidden">Предыдущий слайд</span>
+              </button>
+              <button class="review__button review__button--next button" type="button">
+                <span class="visually-hidden">Следующий слайд</span>
+              </button>
+            </div>
+          </div>
+          <div class="review__slider swiper">
+            <ul class="review__comments-list swiper-wrapper">
+              <li class="review__comments-item swiper-slide">
+                <blockquote class="review__item">
+                  <div class="review__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-one-desktop@1x.webp 1x, img/reviewer-one-desktop@2x.webp 2x" width="258" height="253">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-one-tablet@1x.webp 1x, img/reviewer-one-tablet@2x.webp 2x" width="253" height="418">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-one-mobile@1x.webp 1x, img/reviewer-one-mobile@2x.webp 2x" width="250" height="169">
+                      <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-one-desktop@1x.jpg 1x, img/reviewer-one-desktop@2x.jpg 2x" width="258" height="253">
+                      <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-one-tablet@1x.jpg 1x, img/reviewer-one-tablet@2x.jpg 2x" width="186" height="237">
+                      <img class="review__user-img" src="img/reviewer-one-mobile@1x.jpg" srcset="img/reviewer-one-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Фролова Александра в горах">
+                    </picture>
+                  </div>
+                  <div class="review__feedback-wrapper">
+                    <div class="review__content-wrapper">
+                      <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
+                      <p>С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
+                    </div>
+                    <cite class="review__user-name">Фролов Александр</cite>
+                    <span class="review__user-details">38 лет, Москва</span>
+                  </div>
+                </blockquote>
+              </li>
+              <li class="review__comments-item swiper-slide">
+                <blockquote class="review__item">
+                  <div class="review__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-two-desktop@1x.webp 1x, img/reviewer-two-desktop@2x.webp 2x" width="258" height="253">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-two-tablet@1x.webp 1x, img/reviewer-two-tablet@2x.webp 2x" width="253" height="418">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-two-mobile@1x.webp 1x, img/reviewer-two-mobile@2x.webp 2x" width="250" height="169">
+                      <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-two-desktop@1x.jpg 1x, img/reviewer-two-desktop@2x.jpg 2x" width="258" height="253">
+                      <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-two-tablet@1x.jpg 1x, img/reviewer-two-tablet@2x.jpg 2x" width="186" height="237">
+                      <img class="review__user-img" src="img/reviewer-two-mobile@1x.jpg" srcset="img/reviewer-two-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Ивана Соловьева в горах">
+                    </picture>
+                  </div>
+                  <div class="review__feedback-wrapper">
+                    <div class="review__content-wrapper">
+                      <p>Хороший полноценный поход с&nbsp;разнообразными&nbsp;локациями. В начале дорога&nbsp;идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века. Было очень интересно!</p>
+                      <p>Инструктор Федор дружелюбный, внимательный&nbsp;к технике безопасности и своим туристам. Всем советую этот тур.</p>
+                    </div>
+                    <cite class="review__user-name">Иван Соловьёв</cite>
+                    <span class="review__user-details">25 лет, Владивосток</span>
+                  </div>
+                </blockquote>
+              </li>
+              <li class="review__comments-item swiper-slide">
+                <blockquote class="review__item">
+                  <div class="review__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-three-desktop@1x.webp 1x, img/reviewer-three-desktop@2x.webp 2x" width="258" height="253">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-three-tablet@1x.webp 1x, img/reviewer-three-tablet@2x.webp 2x" width="253" height="418">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-three-mobile@1x.webp 1x, img/reviewer-three-mobile@2x.webp 2x" width="250" height="169">
+                      <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-three-desktop@1x.jpg 1x, img/reviewer-three-desktop@2x.jpg 2x" width="258" height="253">
+                      <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-three-tablet@1x.jpg 1x, img/reviewer-three-tablet@2x.jpg 2x" width="186" height="237">
+                      <img class="review__user-img" src="img/reviewer-three-mobile@1x.jpg" srcset="img/reviewer-three-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Евгении Баженовой в горах">
+                    </picture>
+                  </div>
+                  <div class="review__feedback-wrapper">
+                    <div class="review__content-wrapper">
+                      <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.</p>
+                      <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
+                    </div>
+                    <cite class="review__user-name">Евгения Баженова</cite>
+                    <span class="review__user-details">23 года, Кострома</span>
+                  </div>
+                </blockquote>
+              </li>
+              <li class="review__comments-item swiper-slide">
+                <blockquote class="review__item">
+                  <div class="review__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-four-desktop@1x.webp 1x, img/reviewer-four-desktop@2x.webp 2x" width="258" height="253">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-four-tablet@1x.webp 1x, img/reviewer-four-tablet@2x.webp 2x" width="253" height="418">
+                      <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-four-mobile@1x.webp 1x, img/reviewer-four-mobile@2x.webp 2x" width="250" height="169">
+                      <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-four-desktop@1x.jpg 1x, img/reviewer-four-desktop@2x.jpg 2x" width="258" height="253">
+                      <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-four-tablet@1x.jpg 1x, img/reviewer-four-tablet@2x.jpg 2x" width="186" height="237">
+                      <img class="review__user-img" src="img/reviewer-four-mobile@1x.jpg" srcset="img/reviewer-four-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Елены Пироговой в горах">
+                    </picture>
+                  </div>
+                  <div class="review__feedback-wrapper">
+                    <div class="review__content-wrapper">
+                      <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
+                      <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
+                    </div>
+                    <cite class="review__user-name">Елена Пирогова</cite>
+                    <span class="review__user-details">37 лет, Тюмень</span>
+                  </div>
+                </blockquote>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="advantage" data-test="adv">
+        <div class="advantage__container container">
+          <h2 class="advantage__title" data-duplicate-text="Преимущества" aria-hidden="true">Преимущества</h2>
+          <div class="advantage__slider-wrapper swiper">
+            <ul class="advantage__list swiper-wrapper">
+              <li class="advantage__item advantage__item--shield-icon swiper-slide">
+                <h3>Безопасность</h3>
+                <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и&nbsp;протоколы безопасности. Имеем планы действий на&nbsp;случай непредвиденных обстоятельств и&nbsp;даем гарантию полной безопасности во&nbsp;время всего тура.</p>
+              </li>
+              <li class="advantage__item advantage__item--crown-icon swiper-slide">
+                <h3>Экспертиза и знания</h3>
+                <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. <br>Это гарантирует, что&nbsp;наши клиенты находятся в&nbsp;надежных руках и могут в&nbsp;полной мере насладиться опытом без&nbsp;опасений.</p>
+              </li>
+              <li class="advantage__item advantage__item--boot-icon swiper-slide">
+                <h3>Оборудование и снаряжение</h3>
+                <p>Мы предоставляем клиентам все&nbsp;необходимое оборудование, необходимое для путешествия. Это&nbsp;избавляет клиентов от&nbsp;необходимости покупать, брать с&nbsp;собой снаряжение, что&nbsp;делает путешествие более удобным и&nbsp;экономически выгодным.</p>
+              </li>
+              <li class="advantage__item advantage__item--path-icon swiper-slide">
+                <h3>Индивидуальные маршруты</h3>
+                <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы&nbsp;также&nbsp;можем адаптировать маршруты к вашим конкретным потребностям и&nbsp;предпочтениям, чтобы&nbsp;вы&nbsp;получили индивидуальный опыт.</p>
+              </li>
+              <li class="advantage__item advantage__item--leaf-icon swiper-slide">
+                <h3>Бережное отношение к&nbsp;природе</h3>
+                <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
+              </li>
+            </ul>
+          </div>
+          <div class="advantage__slider-button">
+            <button class="advantage__button advantage__button--prev button" type="button">
               <span class="visually-hidden">Предыдущий слайд</span>
             </button>
-            <button class="review__button review__button--next button" type="button">
+            <button class="advantage__button advantage__button--next button" type="button">
               <span class="visually-hidden">Следующий слайд</span>
             </button>
           </div>
         </div>
-        <div class="review__slider swiper">
-          <ul class="review__comments-list swiper-wrapper">
-            <li class="review__comments-item swiper-slide">
-              <blockquote class="review__item">
-                <div class="review__image-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-one-desktop@1x.webp 1x, img/reviewer-one-desktop@2x.webp 2x" width="258" height="253">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-one-tablet@1x.webp 1x, img/reviewer-one-tablet@2x.webp 2x" width="253" height="418">
-                    <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-one-mobile@1x.webp 1x, img/reviewer-one-mobile@2x.webp 2x" width="250" height="169">
-                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-one-desktop@1x.jpg 1x, img/reviewer-one-desktop@2x.jpg 2x" width="258" height="253">
-                    <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-one-tablet@1x.jpg 1x, img/reviewer-one-tablet@2x.jpg 2x" width="186" height="237">
-                    <img class="review__user-img" src="img/reviewer-one-mobile@1x.jpg" srcset="img/reviewer-one-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Фролова Александра в горах">
-                  </picture>
-                </div>
-                <div class="review__feedback-wrapper">
-                  <div class="review__content-wrapper">
-                    <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
-                    <p>С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
-                  </div>
-                  <cite class="review__user-name">Фролов Александр</cite>
-                  <span class="review__user-details">38 лет, Москва</span>
-                </div>
-              </blockquote>
-            </li>
-            <li class="review__comments-item swiper-slide">
-              <blockquote class="review__item">
-                <div class="review__image-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-two-desktop@1x.webp 1x, img/reviewer-two-desktop@2x.webp 2x" width="258" height="253">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-two-tablet@1x.webp 1x, img/reviewer-two-tablet@2x.webp 2x" width="253" height="418">
-                    <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-two-mobile@1x.webp 1x, img/reviewer-two-mobile@2x.webp 2x" width="250" height="169">
-                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-two-desktop@1x.jpg 1x, img/reviewer-two-desktop@2x.jpg 2x" width="258" height="253">
-                    <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-two-tablet@1x.jpg 1x, img/reviewer-two-tablet@2x.jpg 2x" width="186" height="237">
-                    <img class="review__user-img" src="img/reviewer-two-mobile@1x.jpg" srcset="img/reviewer-two-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Ивана Соловьева в горах">
-                  </picture>
-                </div>
-                <div class="review__feedback-wrapper">
-                  <div class="review__content-wrapper">
-                    <p>Хороший полноценный поход с&nbsp;разнообразными&nbsp;локациями. В начале дорога&nbsp;идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века. Было очень интересно!</p>
-                    <p>Инструктор Федор дружелюбный, внимательный&nbsp;к технике безопасности и своим туристам. Всем советую этот тур.</p>
-                  </div>
-                  <cite class="review__user-name">Иван Соловьёв</cite>
-                  <span class="review__user-details">25 лет, Владивосток</span>
-                </div>
-              </blockquote>
-            </li>
-            <li class="review__comments-item swiper-slide">
-              <blockquote class="review__item">
-                <div class="review__image-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-three-desktop@1x.webp 1x, img/reviewer-three-desktop@2x.webp 2x" width="258" height="253">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-three-tablet@1x.webp 1x, img/reviewer-three-tablet@2x.webp 2x" width="253" height="418">
-                    <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-three-mobile@1x.webp 1x, img/reviewer-three-mobile@2x.webp 2x" width="250" height="169">
-                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-three-desktop@1x.jpg 1x, img/reviewer-three-desktop@2x.jpg 2x" width="258" height="253">
-                    <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-three-tablet@1x.jpg 1x, img/reviewer-three-tablet@2x.jpg 2x" width="186" height="237">
-                    <img class="review__user-img" src="img/reviewer-three-mobile@1x.jpg" srcset="img/reviewer-three-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Евгении Баженовой в горах">
-                  </picture>
-                </div>
-                <div class="review__feedback-wrapper">
-                  <div class="review__content-wrapper">
-                    <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.</p>
-                    <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
-                  </div>
-                  <cite class="review__user-name">Евгения Баженова</cite>
-                  <span class="review__user-details">23 года, Кострома</span>
-                </div>
-              </blockquote>
-            </li>
-            <li class="review__comments-item swiper-slide">
-              <blockquote class="review__item">
-                <div class="review__image-wrapper">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviewer-four-desktop@1x.webp 1x, img/reviewer-four-desktop@2x.webp 2x" width="258" height="253">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/reviewer-four-tablet@1x.webp 1x, img/reviewer-four-tablet@2x.webp 2x" width="253" height="418">
-                    <source type="image/webp" media="(min-width: 320px)" srcset="img/reviewer-four-mobile@1x.webp 1x, img/reviewer-four-mobile@2x.webp 2x" width="250" height="169">
-                    <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/reviewer-four-desktop@1x.jpg 1x, img/reviewer-four-desktop@2x.jpg 2x" width="258" height="253">
-                    <source type="image/jpeg" media="(min-width: 768px)" srcset="img/reviewer-four-tablet@1x.jpg 1x, img/reviewer-four-tablet@2x.jpg 2x" width="186" height="237">
-                    <img class="review__user-img" src="img/reviewer-four-mobile@1x.jpg" srcset="img/reviewer-four-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография Елены Пироговой в горах">
-                  </picture>
-                </div>
-                <div class="review__feedback-wrapper">
-                  <div class="review__content-wrapper">
-                    <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
-                    <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
-                  </div>
-                  <cite class="review__user-name">Елена Пирогова</cite>
-                  <span class="review__user-details">37 лет, Тюмень</span>
-                </div>
-              </blockquote>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="advantage" data-test="adv">
-      <div class="advantage__container container">
-        <h2 class="advantage__title" data-duplicate-text="Преимущества" aria-hidden="true">Преимущества</h2>
-        <div class="advantage__slider-wrapper swiper">
-          <ul class="advantage__list swiper-wrapper">
-            <li class="advantage__item advantage__item--shield-icon swiper-slide">
-              <h3>Безопасность</h3>
-              <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и&nbsp;протоколы безопасности. Имеем планы действий на&nbsp;случай непредвиденных обстоятельств и&nbsp;даем гарантию полной безопасности во&nbsp;время всего тура.</p>
-            </li>
-            <li class="advantage__item advantage__item--crown-icon swiper-slide">
-              <h3>Экспертиза и знания</h3>
-              <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. <br>Это гарантирует, что&nbsp;наши клиенты находятся в&nbsp;надежных руках и могут в&nbsp;полной мере насладиться опытом без&nbsp;опасений.</p>
-            </li>
-            <li class="advantage__item advantage__item--boot-icon swiper-slide">
-              <h3>Оборудование и снаряжение</h3>
-              <p>Мы предоставляем клиентам все&nbsp;необходимое оборудование, необходимое для путешествия. Это&nbsp;избавляет клиентов от&nbsp;необходимости покупать, брать с&nbsp;собой снаряжение, что&nbsp;делает путешествие более удобным и&nbsp;экономически выгодным.</p>
-            </li>
-            <li class="advantage__item advantage__item--path-icon swiper-slide">
-              <h3>Индивидуальные маршруты</h3>
-              <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы&nbsp;также&nbsp;можем адаптировать маршруты к вашим конкретным потребностям и&nbsp;предпочтениям, чтобы&nbsp;вы&nbsp;получили индивидуальный опыт.</p>
-            </li>
-            <li class="advantage__item advantage__item--leaf-icon swiper-slide">
-              <h3>Бережное отношение к&nbsp;природе</h3>
-              <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
-            </li>
-          </ul>
-        </div>
-        <div class="advantage__slider-button">
-          <button class="advantage__button advantage__button--prev button" type="button">
-            <span class="visually-hidden">Предыдущий слайд</span>
-          </button>
-          <button class="advantage__button advantage__button--next button" type="button">
-            <span class="visually-hidden">Следующий слайд</span>
-          </button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <section class="gallery" data-test="gallery">
       <div class="gallery__container container">
         <h2 class="gallery__title" data-duplicate-text="Фотогалерея" aria-hidden="true">Фотогалерея</h2>

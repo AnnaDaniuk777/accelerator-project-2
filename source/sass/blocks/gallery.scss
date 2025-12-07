@@ -7,6 +7,16 @@
     padding-top: 67px;
   }
 
+  @media (min-width: $tablet-width) {
+    padding-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 121px;
+    padding-bottom: 46px;
+    padding-right: 350px;
+  }
+
   p {
     margin: 0;
     font-size: 12px;
@@ -24,16 +34,6 @@
       padding-right: 310px;
     }
   }
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 21px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 119px;
-    padding-bottom: 46px;
-    padding-right: 350px;
-  }
 }
 
 .gallery__title {
@@ -44,10 +44,22 @@
   line-height: 22px;
   font-weight: 800;
 
+  @media (min-width: $tablet-width) {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 25px;
+  }
+
   &::after {
     content: attr(data-duplicate-text);
     position: absolute;
-    bottom: 50%;
+    bottom: 10px;
     left: 0;
     opacity: 0.03;
     pointer-events: none;
@@ -66,18 +78,6 @@
       font-size: 55px;
       line-height: 55px;
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    font-size: 25px;
-    line-height: 25px;
-    margin-bottom: 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    font-size: 35px;
-    line-height: 35px;
-    margin-bottom: 27px;
   }
 }
 
